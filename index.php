@@ -24,13 +24,31 @@
 
     <div class="op0 flex fixed h-screen w-screen bg-zinc-950/90 top-0 right-0 z-20 justify-center items-center" id="menuInterface">
 
-        <div class="flex flex-col lg:mr-100 op0" id="menuList">
-            <ul class="text-gray-100 font-bold text-4xl flex flex-col gap-5">
-                <li><button class="hover:text-gray-400 transition-all duration-200">Services</button></li>
-                <li><button class="hover:text-gray-400 transition-all duration-200">Portfolio</button></li>
-                <li><button class="hover:text-gray-400 transition-all duration-200">A propos</button></li>
-                <li><button class="hover:text-gray-400 transition-all duration-200">Contact</button></li>
-            </ul>
+        <div class="flex flex-col lg:flex-row justify-center gap-4 lg:gap-8">
+            <div class="flex flex-col op0" id="menuList">
+                <ul class="text-gray-100 font-bold text-2xl lg:text-4xl flex flex-col gap-5">
+                    <li><button class="hover:text-gray-400 transition-all duration-200" id="toggleServices">Services</button></li>
+                    <li><button class="hover:text-gray-400 transition-all duration-200">Portfolio</button></li>
+                    <li><button class="hover:text-gray-400 transition-all duration-200">A propos</button></li>
+                    <li><button class="hover:text-gray-400 transition-all duration-200">Contact</button></li>
+                </ul>
+            </div>
+            <div class="flex flex-col op0 self-center" id="menuServices">
+                <ul class="text-gray-400 font-bold text-xl lg:text-4xl flex flex-col gap-5">
+                    <li><button class="hover:text-gray-600 transition-all duration-200">Architectural Design</button></li>
+                    <li><button class="hover:text-gray-600 transition-all duration-200">Planning Applications</button></li>
+                    <li><button class="hover:text-gray-600 transition-all duration-200">Interior Design</button></li>
+                    <li><button class="hover:text-gray-600 transition-all duration-200">Conservation & Heritage Design</button></li>
+                    <li><button class="hover:text-gray-600 transition-all duration-200">Create & Construct</button></li>
+                </ul>
+            </div>
+            <!-- <div class="flex flex-col op0 self-center" id="menuPortfolio">
+                <ul class="text-gray-400 font-bold text-xl lg:text-4xl flex flex-col gap-5">
+                    <li><button class="hover:text-gray-600 transition-all duration-200">Residential</button></li>
+                    <li><button class="hover:text-gray-600 transition-all duration-200">Commercial</button></li>
+                    <li><button class="hover:text-gray-600 transition-all duration-200">Conservation & Heritage</button></li>
+                </ul>
+            </div> -->
         </div>
 
         <div class="flex justify-end self-end w-screen right-15 bottom-15 absolute gap-8">
