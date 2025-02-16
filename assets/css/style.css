@@ -155,20 +155,8 @@
   transition-duration: 1s;
 }
 
+
+
 .bckground {
   background-image: url('../img/modern.webp');
-}
-
-.zoomimg {
-  background-size: 100%;
-  animation: zoomBackground 20s linear;
-}
-
-@keyframes zoomBackground {
-  0% {
-    background-size: 100%;
-  }
-  100% {
-    background-size: 130%;
-  }
 }
