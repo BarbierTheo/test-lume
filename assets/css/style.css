@@ -1,6 +1,5 @@
 @import "tailwindcss";
-
-
+@import "tailwindcss-animated";
 
 * {
   font-family: 'Superior';
@@ -52,7 +51,7 @@
   --bar-height: 4px;
   --hamburger-gap: 6px;
   --foreground: #fff9f5;
-  --hamburger-margin: 1.5rem;
+  --hamburger-margin: 2rem;
   --animation-timing: 200ms ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
