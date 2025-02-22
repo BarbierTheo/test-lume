@@ -17,53 +17,10 @@
 </head>
 
 <body>
-    <header class="flex w-screen fixed z-50 lg:justify-center">
-        <a href="#" class="w-64 h-64 bg-[url(../img/logo.png)] bg-cover bg-center bg-no-repeat logo self-center"></a>
-        <label class="hamburger-menu" id="openMenu">
-            <input type="checkbox">
-        </label>
-    </header>
+    
+<?php
 
-
-
-    <div class="op0 flex fixed h-[100vh] w-screen bg-zinc-950/90 top-0 right-0 justify-center items-center" id="menuInterface">
-
-        <div class="flex flex-col lg:flex-row justify-center gap-4 lg:gap-8">
-            <div class="flex flex-col op0" id="menuList">
-                <ul class="text-gray-100 font-bold text-2xl lg:text-4xl flex flex-col gap-5 animate-rotate-x animate-once animate-duration-[800ms] animate-ease-in">
-                    <li><button class="hover:text-gray-400 transition-all duration-200" id="toggleServices">Services</button></li>
-                    <li><button class="hover:text-gray-400 transition-all duration-200" id="toggleProjects">Portfolio</button></li>
-                    <li><button class="hover:text-gray-400 transition-all duration-200">A propos</button></li>
-                    <li><button class="hover:text-gray-400 transition-all duration-200">Contact</button></li>
-                </ul>
-            </div>
-
-            <div class="w-1 h-70 rounded-lg bg-gray-400 op0" id="servicesDivider"></div>
-            <div class="flex flex-col op0 self-center" id="menuServices">
-                <ul class="text-gray-400 font-bold text-xl lg:text-4xl flex flex-col gap-5">
-                    <li><button class="hover:text-gray-600 transition-all duration-200">Architectural Design</button></li>
-                    <li><button class="hover:text-gray-600 transition-all duration-200">Planning Applications</button></li>
-                    <li><button class="hover:text-gray-600 transition-all duration-200">Interior Design</button></li>
-                    <li><button class="hover:text-gray-600 transition-all duration-200">Conservation & Heritage Design</button></li>
-                    <li><button class="hover:text-gray-600 transition-all duration-200">Create & Construct</button></li>
-                </ul>
-            </div>
-            <div class="w-1 h-70 rounded-lg bg-gray-400 op0" id="projectsDivider"></div>
-            <div class="flex flex-col op0 self-center" id="menuProjects">
-                <ul class="text-gray-400 font-bold text-xl lg:text-4xl flex flex-col gap-5">
-                    <li><button class="hover:text-gray-600 transition-all duration-200">Residential</button></li>
-                    <li><button class="hover:text-gray-600 transition-all duration-200">Commercial</button></li>
-                    <li><button class="hover:text-gray-600 transition-all duration-200">Conservation & Heritage</button></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="flex justify-end self-end w-screen right-15 bottom-15 absolute gap-8">
-            <a href="" class="self-end text-slate-500 hover:underline">Mentions légales</a>
-            <a href="" class="text-3xl lg:text-4xl text-gray-50"><i class="uil uil-instagram"></i></a>
-        </div>
-    </div>
-
+include_once 'menu.php'; ?>
 
 
     <div class="swiper bg-zinc-950/90">

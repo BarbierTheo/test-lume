@@ -52,7 +52,7 @@
   --hamburger-gap: 6px;
   --foreground: #fff9f5;
   --hamburger-margin: 2rem;
-  --animation-timing: 200ms ease-in-out;
+  --animation-timing: 400ms ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
@@ -117,11 +117,11 @@
   width: 0;
 }
 
-
+/* 
 .logo {
-  top: var(--hamburger-margin);
+  /* top: var(--hamburger-margin);
   left: var(--hamburger-margin);
-}
+} */
 
 
 /* INTERFACE MENU */
@@ -154,6 +154,22 @@
   transition-duration: 1s;
 }
 
+.b0 {
+  block-size: 0rem;
+  padding-block: 0;
+  transition: all 2s ease-in-out;
+  display: hidden;
+  transition-behavior: allow-discrete;
+}
+
+.b1 {
+  display: flex;
+  block-size: auto;
+  block-size: calc-size(auto);
+  padding-block: 0;
+  transition: all 2s ease-in-out;
+  display: flex;
+}
 
 
 .bckground {
