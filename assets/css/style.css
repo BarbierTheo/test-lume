@@ -1,8 +1,11 @@
 @import "tailwindcss";
 @import "tailwindcss-animated";
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
-  font-family: 'Superior';
+  font-family: 'Inter';
 }
 
 *,
@@ -13,7 +16,7 @@
 
 /* TYPO */
 
-@font-face {
+/* @font-face {
   font-family: 'Superior';
   src: url('../fonts/LTSuperior-Regular.otf') format('opentype');
   font-weight: normal;
@@ -39,8 +42,7 @@
   src: url('../fonts/LTSuperior-SemiBold.otf') format('opentype');
   font-weight: bolder;
   font-style: normal;
-}
-
+} */
 
 
 /* https://www.youtube.com/watch?v=dAIVbLrAb_U */

@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
       menuInterface.style.opacity = "0";
       setTimeout(() => {
         menuInterface.classList.toggle("z-40");
+        menuInterface.classList.toggle("hidden");
+        menuInterface.classList.toggle("flex");
       }, 800);
 
     } else {
@@ -55,6 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
         delay = delay + 100;
       }
 
+      menuInterface.classList.toggle("hidden");
+      menuInterface.classList.toggle("flex");
       menuInterface.classList.toggle("z-40");
       menuInterface.style.opacity = "1";
 
@@ -82,10 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".secondstate").innerHTML = `
               <div class="hidden lg:block w-0 lg:w-[0.1rem] rounded-lg bg-gray-400 " style="height: 0; opacity: 0; transition: height 1s ease-in-out, opacity 1s ease-in-out;" id="barServices"></div>
               <div class="flex flex-col menu" id="menuServices" style="width : 0; white-space: nowrap; height: 0; opacity: 0; transition: width 1s ease, opacity 1s ease-in-out;">
-                  <ul class="text-gray-400 font-bold text-xl lg:text-4xl flex flex-col gap-5 text-center lg:text-left">
-                      <li><button class="hover:text-gray-600 transition-all duration-200">Architecture</button></li>
-                      <li><button class="hover:text-gray-600 transition-all duration-200">Rendus & Visuels 3D</button></li>
-                      <li><button class="hover:text-gray-600 transition-all duration-200">Conseils & accompagnements</button></li>
+                  <ul class="text-gray-400 font-light text-xl lg:text-4xl flex flex-col gap-5 text-center lg:text-left">
+                      <li><a href="" class="hover:text-gray-500 transition-all duration-200">Architecture</a></li>
+                      <li><a href="" class="hover:text-gray-500 transition-all duration-200">Rendus & Visuels 3D</a></li>
+                      <li><a href="" class="hover:text-gray-500 transition-all duration-200">Conseils & accompagnements</a></li>
                   </ul>
               </div>`;
 
@@ -125,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // Réglages carousel
-  const swiper = new Swiper(".swiper", {
+  const swiperHeader = new Swiper(".swiperHeader", {
     direction: "horizontal",
     loop: true,
     autoplay: {
@@ -136,4 +140,10 @@ document.addEventListener("DOMContentLoaded", () => {
       crossFade: true,
     },
   });
+
+  var swiper = new Swiper(".swiperProjects", {
+    effect: "cards",
+    grabCursor: true,
+  });
+
 });
