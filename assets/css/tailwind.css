@@ -864,6 +864,9 @@
     width: calc(var(--spacing) * 1);
     height: calc(var(--spacing) * 1);
   }
+  .h-0 {
+    height: calc(var(--spacing) * 0);
+  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
@@ -911,6 +914,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-0 {
+    width: calc(var(--spacing) * 0);
   }
   .w-1 {
     width: calc(var(--spacing) * 1);
@@ -1703,6 +1709,9 @@
   .\!bg-gray-50 {
     background-color: var(--color-gray-50) !important;
   }
+  .\!bg-gray-700 {
+    background-color: var(--color-gray-700) !important;
+  }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
   }
@@ -1717,6 +1726,9 @@
   }
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
+  }
+  .bg-amber-50 {
+    background-color: var(--color-amber-50);
   }
   .bg-amber-50\/5 {
     background-color: color-mix(in oklab, var(--color-amber-50) 5%, transparent);
@@ -1766,6 +1778,9 @@
   .bg-white\/50 {
     background-color: color-mix(in oklab, var(--color-white) 50%, transparent);
   }
+  .bg-zinc-950 {
+    background-color: var(--color-zinc-950);
+  }
   .bg-zinc-950\/90 {
     background-color: color-mix(in oklab, var(--color-zinc-950) 90%, transparent);
   }
@@ -1809,6 +1824,10 @@
     --tw-gradient-via: var(--color-gray-50);
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .to-neutral-600 {
+    --tw-gradient-to: var(--color-neutral-600);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-neutral-600\/50 {
     --tw-gradient-to: color-mix(in oklab, var(--color-neutral-600) 50%, transparent);
@@ -1971,6 +1990,9 @@
   }
   .p-1\.5 {
     padding: calc(var(--spacing) * 1.5);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
   }
   .p-2\.5 {
     padding: calc(var(--spacing) * 2.5);
@@ -2974,6 +2996,11 @@
   .lg\:w-38 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 38);
+    }
+  }
+  .lg\:w-\[0\.1rem\] {
+    @media (width >= 64rem) {
+      width: 0.1rem;
     }
   }
   .lg\:max-w-\[50\%\] {

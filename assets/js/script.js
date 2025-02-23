@@ -66,6 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
+
+
+  // ***************************************************************** 
+  // TOGGLE SERVICES 
+  // *****************************************************************
+  
   document
     .getElementById("toggleServices")
     .addEventListener("click", showServices);
@@ -74,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function showServices() {
     if (state !== "services") {
       document.querySelector(".secondstate").innerHTML = `
-              <div class="w-[0.1rem] rounded-lg bg-gray-400" style="height: 0; opacity: 0; transition: height 1s ease-in-out, opacity 1s ease-in-out;" id="barServices"></div>
+              <div class="hidden lg:block w-0 lg:w-[0.1rem] rounded-lg bg-gray-400 " style="height: 0; opacity: 0; transition: height 1s ease-in-out, opacity 1s ease-in-out;" id="barServices"></div>
               <div class="flex flex-col menu" id="menuServices" style="width : 0; white-space: nowrap; height: 0; opacity: 0; transition: width 1s ease, opacity 1s ease-in-out;">
                   <ul class="text-gray-400 font-bold text-xl lg:text-4xl flex flex-col gap-5 text-center lg:text-left">
                       <li><button class="hover:text-gray-600 transition-all duration-200">Architecture</button></li>
@@ -113,6 +119,10 @@ document.addEventListener("DOMContentLoaded", () => {
       state = "";
     }
   }
+
+  // if state = "services" et click sur entrymenu 1, crée une ul avec les li en col en dessous de entrymenu 1 et animer height
+
+
 
   // Réglages carousel
   const swiper = new Swiper(".swiper", {
