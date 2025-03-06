@@ -140,10 +140,23 @@ document.addEventListener("DOMContentLoaded", () => {
       crossFade: true,
     },
   });
+  let slides = 0
+  screen.width >= 1000 ? slides = 3 : slides = 2;
 
   var swiper = new Swiper(".swiperProjects", {
-    effect: "cards",
+    loop: true,
+    autoplay: {
+      delay: 10000,
+    },
+
+    slidesPerView: slides,
+    centeredSlides: false,
+    spaceBetween: 30,
     grabCursor: true,
-  });
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+  }});
+  console.log(slides)
 
 });
