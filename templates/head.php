@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lume</title>
     <link rel="stylesheet" href="../public/css/normalize.css">
-    <!-- npx @tailwindcss/cli -i ./assets/css/style.css -o ./assets/css/tailwind.css --watch -->
+    <!-- npx @tailwindcss/cli -i ./public/css/style.css -o ./public/css/tailwind.css --watch -->
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />

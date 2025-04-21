@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lume</title>
     <link rel="stylesheet" href="./css/normalize.css">
-    <!-- npx @tailwindcss/cli -i ./assets/css/style.css -o ./assets/css/tailwind.css --watch -->
+    <!-- npx @tailwindcss/cli -i ./public/css/style.css -o ./public/css/tailwind.css --watch -->
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -16,61 +16,165 @@
 
 </head>
 
-<body class="bg-orange-100">
+<body class="bg-neutral-950/80">
 
-<?php include_once "../templates/menu.php" ?>
-<?php include_once "../templates/carousel.php" ?>
+    <?php include_once "../templates/menu.php" ?>
+    <?php include_once "../templates/carousel.php" ?>
 
-<main class="max-w-screen min-h-[80vh] mx-auto lg:m-0">
+    <main class="lg:max-w-[1200px] px-4 lg:mx-auto">
 
-    <section class="mx-auto mt-8 w-full lg:w-full flex lg:flex-row flex-col items-start lg:justify-between pb-8 lg:pb-14">
-
-        <div class="p-8 flex flex-col w-full lg:w-[65vw] text-zinc-800">
-            <div class="swiper swiperProjects w-full h-80">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide w-fit h-fit">
-                        <div class="w-full h-full rounded-lg bg-[url(../img/modern.webp)] bg-cover bg-center bg-no-repeat"></div>
+        <!-- CONSTRUIRE, IMAGINER, REINVENTER -->
+        <section class="flex flex-col justify-center gap-4 py-16 text-white">
+            <div class="flex flex-col text-3xl lg:text-5xl uppercase font-bold leading-8 lg:leading-12">
+                <span>Construire,</span>
+                <span>imaginer,</span>
+                <span>réinventer</span>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-4">
+                <img src="./img/terrasse.png" alt="" class="lg:w-[50%]">
+                <div class="flex flex-col lg:w-[50%] justify-between">
+                    <div class="flex flex-col gap-2">
+                        <span>Fondée en 2024, notre agence conçoit des espaces durables, élégants et fonctionnels. Nous accompagnons particuliers et professionnels dans la réalisation de projets uniques, pensés pour s’intégrer harmonieusement à leur environnement.</span>
+                        <span>Entre créativité et rigueur, notre équipe pluridisciplinaire mêle expertise technique et sensibilité artistique pour imaginer les lieux de demain.</span>
                     </div>
-                    <div class="swiper-slide w-fit h-fit">
-                        <div class="w-full h-full rounded-lg bg-[url(../img/modern.webp)] bg-cover bg-center bg-no-repeat"></div>
-                    </div>
-                    <div class="swiper-slide w-fit h-fit">
-                        <div class="w-full h-full rounded-lg bg-[url(../img/modern.webp)] bg-cover bg-center bg-no-repeat"></div>
-                    </div>
-                    <div class="swiper-slide w-fit h-fit">
-                        <div class="w-full h-full rounded-lg bg-[url(../img/modern.webp)] bg-cover bg-center bg-no-repeat"></div>
-                    </div>
-
-
+                    <a href="" class="border-2 border-white text-white font-semibold rounded-full py-4 px-16 w-fit hover:!bg-white hover:text-zinc-800 transition-all duration-300 self-center lg:self-start mt-4 lg:mt-0">En savoir plus</a>
                 </div>
             </div>
-            <div class="flex w-full lg:w-[50vw] mt-10 flex-col gap-6">
-                <h2 class="font-semibold text-5xl">Unde fuga nulla maiores</h2>
-                <p class="text-justify lg:text-left leading-6 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem commodi quo corporis dolorem dolore vero soluta velit, aspernatur atque. Consectetur porro maiores, earum veritatis ad officia alias fuga velit nisi.
-                    Porro sit ut reprehenderit quo iste accusantium fugit mollitia.</p>
-                <a href="" class="m-auto lg:m-0 w-fit"><span class="flex items-center border-2 w-fit p-4 rounded-lg border-zinc-800 hover:bg-zinc-800 hover:text-zinc-100 transition-all duration-300">Découvrez nos projets</span></a>
+        </section>
+
+
+        <!-- NOS PROJETS -->
+        <section class="flex flex-col justify-center gap-4 py-16 text-white">
+            <span class="text-3xl lg:text-5xl uppercase font-bold">Nos projets</span>
+
+            <div class="flex gap-4 flex-wrap">
+                <button class="py-2 px-3 font-semibold !bg-zinc-100 rounded-full text-black !text-sm !uppercase cursor-pointer">Tous</button>
+                <button class="py-2 px-3 font-semibold hover:!bg-zinc-100 rounded-full hover:text-black !text-sm !uppercase transition-all duration-300 cursor-pointer">Résidentiel</button>
+                <button class="py-2 px-3 font-semibold hover:!bg-zinc-100 rounded-full hover:text-black !text-sm !uppercase transition-all duration-300 cursor-pointer">Commercial</button>
+                <button class="py-2 px-3 font-semibold hover:!bg-zinc-100 rounded-full hover:text-black !text-sm !uppercase transition-all duration-300 cursor-pointer">Concepts</button>
             </div>
-        </div>
+
+            <div class="grid grid-cols-3 grid-rows-2 gap-4">
+
+                <div class="row-span-2 flex flex-col gap-2">
+                    <a href="" class="flex justify-between items-center">
+                        <span class="text-sm font-bold">SEBHA</span>
+                        <span class="text-sm font-light">2025</span>
+                    </a>
+                    <div class="relative h-full">
+                        <img src="/img/sweet_home.png" alt="Nature" class="w-full h-full object-cover">
+                        <a href="#" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
+                    </div>
+                </div>
+
+                <div class="col-span-2 flex flex-col gap-2">
+                    <a href="" class="flex justify-between items-center">
+                        <span class="text-sm font-bold">SEBHA</span>
+                        <span class="text-sm font-light">2025</span>
+                    </a>
+                    <div class="relative h-full">
+                        <img src="/img/Interior_design.png" alt="Nature" class="w-full h-full object-cover object-center">
+                        <a href="#" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
+                    </div>
+                </div>
+
+                <div class="col-span-2 flex flex-col gap-2">
+                    <a href="" class="flex justify-between items-center">
+                        <span class="text-sm font-bold">SEBHA</span>
+                        <span class="text-sm font-light">2025</span>
+                    </a>
+                    <div class="relative h-full">
+                        <img src="/img/Minimaliste_Living_Room.png" alt="Nature" class="w-full h-full object-cover object-center">
+                        <a href="#" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-end my-2">
+                <a href="" class="!bg-orange-50 text-black font-semibold rounded-full py-4 px-8 w-fit hover:!bg-orange-200 transition-all duration-300">Découvrez nos projets</a>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="flex flex-col justify-center gap-4 py-16 text-white">
+            <span class="text-3xl lg:text-5xl uppercase font-bold">Des questions ?</span>
+            <div class="flex gap-1 flex-wrap">
+                <span>Vous ne trouvez pas les réponses que vous cherchez ?</span>
+                <a href="" class="font-semibold">Contactez-nous</a>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <div class="collapse collapse-arrow bg-neutral-950/50 rounded-xl">
+                    <input type="checkbox" />
+                    <div class="collapse-title font-semibold">Pourquoi faire appel à un architecte pour mon projet ?</div>
+                    <div class="collapse-content text-sm flex flex-col font-light gap-2">
+                        <p>Un architecte apporte son expertise pour créer un projet esthétique, fonctionnel et conforme aux normes. Il optimise les coûts, gère le respect des délais et supervise les travaux, garantissant la qualité et la sécurité du chantier.</p>
+                        <p>En plus, il veille à la valorisation de votre bien immobilier à travers une conception réfléchie et unique.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-arrow bg-neutral-950/50 rounded-xl">
+                    <input type="checkbox" />
+                    <div class="collapse-title font-semibold">Quelles sont les étapes d’un projet avec une agence ?</div>
+                    <div class="collapse-content text-sm flex flex-col font-light gap-2">
+                        <p>Le processus commence par une étude de vos besoins et une définition du cahier des charges. L'agence conçoit ensuite un projet adapté, valide avec vous avant de commencer les travaux. Durant la réalisation, elle supervise le chantier et s'assure de la qualité. Enfin, elle procède à la réception du projet et aux ajustements nécessaires.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-arrow bg-neutral-950/50 rounded-xl">
+                    <input type="checkbox" />
+                    <div class="collapse-title font-semibold">Peut-on vous confier un projet à distance ?</div>
+                    <div class="collapse-content text-sm flex flex-col font-light gap-2">
+                        <p>Oui, il est tout à fait possible de confier un projet à distance. Grâce aux outils numériques, nous pouvons échanger, collaborer et suivre l’avancement du projet de manière fluide, tout en respectant vos attentes et délais.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
 
 
-        <div class="m-8 p-8 w-fit lg:w-[30vw] flex flex-col text-zinc-800 border-2 lg:mt-6 mt-10 h-fit self-start rounded-lg gap-4">
-            <a href="" class="text-2xl font-semibold hover:underline">Architecture</a>
-            <span class="leading-6 font-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis dolorem aliquam vitae cumque, esse odio illo obcaecati aperiam consequatur nobis soluta aliquid qui sed itaque illum voluptatibus, commodi suscipit. Consectetur.</span>
-            <hr class="my-1">
-            <a href="" class="text-2xl font-semibold hover:underline">Rendus & Visuels 3D</a>
-            <span class="leading-6 font-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis dolorem aliquam vitae cumque, esse odio illo obcaecati aperiam consequatur nobis soluta aliquid qui sed itaque illum voluptatibus, commodi suscipit. Consectetur.</span>
-            <hr class="my-1">
-            <a href="" class="text-2xl font-semibold hover:underline">Conseils & Accompagnements</a>
-            <span class="leading-6 font-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis dolorem aliquam vitae cumque, esse odio illo obcaecati aperiam consequatur nobis soluta aliquid qui sed itaque illum voluptatibus, commodi suscipit. Consectetur.</span>
-        </div>
-    </section>
+        <!-- NOUS CONTACTER -->
+        <section class="flex flex-col justify-center gap-4 py-16 text-white">
+            <span class="text-3xl lg:text-5xl uppercase font-bold">Nous contacter</span>
 
-</main>
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="flex flex-col lg:w-[50%] gap-6 text-left lg:text-right">
+
+                    <div class="flex flex-col gap-1">
+                        <span class="font-bold">Email :</span>
+                        <a href="mailto:contact@lume.com">contact@lume.com</a>
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <span class="font-bold">Téléphone :</span>
+                        <a href="tel:+bipboubap">+33 bipboubap</a>
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <span class="font-bold">Réseaux sociaux :</span>
+                        <ul>
+                            <li><a href="https://www.facebook.com/lume" target="_blank">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/lume" target="_blank">Instagram</a></li>
+                            <li><a href="https://www.linkedin.com/company/lume" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/lume" target="_blank">Twitter</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <span class="font-bold">Horaires :</span>
+                        <span>Lundi - Vendredi : 9h - 18h</span>
+                    </div>
+                </div>
+
+                <img src="./img/Minimalist_villa.png" alt="" class="lg:w-[50%]">
+            </div>
+    </main>
 
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <?php include_once "../templates/footer.php" ?>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./js/scriptmenucarousel.js"></script>
-    </body>
+</body>
 
-    </html>
+</html>

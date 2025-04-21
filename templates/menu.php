@@ -1,5 +1,5 @@
-<header class="flex w-screen fixed z-50 lg:justify-center justify-start h-fit">
-    <a href="#" class="logo lg:self-center pt-6 h-full align"> <img src="./assets/img/testlogo.png" alt="" class="ml-6 w-32 lg:w-38 self-center"></a>
+<header class="flex w-screen fixed z-50  h-fit">
+    <a href="#" class="logo pt-6 h-full"> <img src="img/testlogo.png" alt="" class="ml-6 w-32 lg:w-38 self-center"></a>
     <label class="hamburger-menu" id="openMenu">
         <input type="checkbox">
     </label>
@@ -16,21 +16,8 @@
                 <li class="entryMenu4" style="opacity: 0;"><a href="" class="hover:text-gray-400 cursor-pointer">Contact</a></li>
             </ul>
         </div>
-
         <div class="secondstate flex flex-col lg:flex-row gap-8">
-
-           
         </div>
-
-        <!-- <div class="w-1 h-70 rounded-lg bg-gray-400" id="projectsDivider"></div>
-        <div class="flex flex-col op0 self-center" id="menuProjects">
-            <ul class="text-gray-400 font-bold text-xl lg:text-4xl flex flex-col gap-5">
-                <li><button class="hover:text-gray-600 transition-all duration-200">Residential</button></li>
-                <li><button class="hover:text-gray-600 transition-all duration-200">Commercial</button></li>
-                <li><button class="hover:text-gray-600 transition-all duration-200">Conservation & Heritage</button></li>
-            </ul>
-        </div> -->
-        
     </div>
 
     <div class="flex justify-end self-end w-screen right-15 bottom-15 absolute gap-8">
