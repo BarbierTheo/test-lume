@@ -3,7 +3,7 @@
     <div class="swiper-wrapper">
 
         <div class="swiper-slide ">
-            <div class="bg-[url(../img/modern.webp)] w-screen h-screen bg-center bg-no-repeat bg-cover z-5 flex justify-start">
+            <div class="bg-[url(../img/terrasse.png)] w-screen h-screen bg-center bg-no-repeat bg-cover z-5 flex justify-start">
                 <main class="h-screen w-screen flex flex-col justify-end">
                     <div class="flex flex-col lg:ml-18 lg:mb-18 ml-8 mb-8 gap-2 lg:max-w-[50%] max-w-[90%] z-20">
                         <div class="flex lg:flex-row flex-col uppercase lg:gap-4 text-xl text-left items-start">
@@ -16,8 +16,8 @@
                         <button class="moreInfos text-xl font px-12 py-4 rounded-lg border-2 cursor-pointer self-start bg-orange-50/5 text-orange-100 border-orange-100 hover:bg-orange-200 hover:text-zinc-800 transition-all duration-300">Plus d'infos</button>
                     </div>
                 </main>
-                <div class="bg-gradient-to-b from-transparent via-gray-50  to-neutral-900 w-screen h-screen absolute mix-blend-multiply z-10"></div>
-                <div class="bg-gradient-to-t from-transparent  to-neutral-600/50 w-screen h-screen absolute mix-blend-multiply z-10"></div>
+                <div class="bg-gradient-to-b from-transparent via-gray-50  to-neutral-700 w-screen h-screen absolute mix-blend-multiply z-10"></div>
+                <div class="bg-gradient-to-t from-transparent  to-neutral-600/30 w-screen h-screen absolute mix-blend-multiply z-10"></div>
             </div>
         </div>
 
