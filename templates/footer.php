@@ -7,7 +7,7 @@
 
     <div class="flex flex-col gap-2 my-2">
         <span class="font-bold">Services</span>
-        <a href="">Architecte</a>
+        <a href="">Architecture</a>
         <a href="">Rendus & Visuels 3D</a>
         <a href="">Conseils & Accompagnements</a>
     </div>

@@ -31,7 +31,7 @@
                 <span>réinventer</span>
             </div>
             <div class="flex flex-col lg:flex-row gap-4">
-                <img src="./img/terrasse.png" alt="" class="lg:w-[50%]">
+                <img src="./img/terrasse.png" alt="" class="lg:w-[50%] max-h-[40rem] object-cover">
                 <div class="flex flex-col lg:w-[50%] justify-between">
                     <div class="flex flex-col gap-2">
                         <span>Fondée en 2024, notre agence conçoit des espaces durables, élégants et fonctionnels. Nous accompagnons particuliers et professionnels dans la réalisation de projets uniques, pensés pour s’intégrer harmonieusement à leur environnement.</span>
@@ -45,14 +45,14 @@
 
         <!-- NOS PROJETS -->
         <section class="flex flex-col justify-center gap-4 py-16 text-white">
-            <span class="text-3xl lg:text-5xl uppercase font-bold">Nos projets</span>
+            <span class="text-3xl lg:text-5xl uppercase font-bold">La galerie</span>
 
-            <div class="flex gap-4 flex-wrap">
+            <!-- <div class="flex gap-4 flex-wrap">
                 <button class="py-2 px-3 font-semibold !bg-zinc-100 rounded-full text-black !text-sm !uppercase cursor-pointer">Tous</button>
                 <button class="py-2 px-3 font-semibold hover:!bg-zinc-100 rounded-full hover:text-black !text-sm !uppercase transition-all duration-300 cursor-pointer">Résidentiel</button>
                 <button class="py-2 px-3 font-semibold hover:!bg-zinc-100 rounded-full hover:text-black !text-sm !uppercase transition-all duration-300 cursor-pointer">Commercial</button>
                 <button class="py-2 px-3 font-semibold hover:!bg-zinc-100 rounded-full hover:text-black !text-sm !uppercase transition-all duration-300 cursor-pointer">Concepts</button>
-            </div>
+            </div> -->
 
             <div class="grid grid-cols-3 grid-rows-2 gap-4">
 
@@ -62,7 +62,7 @@
                         <span class="text-sm font-light">2025</span>
                     </a>
                     <div class="relative h-full">
-                        <img src="/img/sweet_home.png" alt="Nature" class="w-full h-full object-cover">
+                        <img src="/img/sweet_home.png" alt="Nature" class="w-full h-full object-cover max-h-[50rem]">
                         <a href="#" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                         <span class="text-sm font-light">2025</span>
                     </a>
                     <div class="relative h-full">
-                        <img src="/img/Interior_design.png" alt="Nature" class="w-full h-full object-cover object-center">
+                        <img src="/img/Interior_design.png" alt="Nature" class="w-full h-full object-cover max-h-[23rem]">
                         <a href="#" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                         <span class="text-sm font-light">2025</span>
                     </a>
                     <div class="relative h-full">
-                        <img src="/img/Minimaliste_Living_Room.png" alt="Nature" class="w-full h-full object-cover object-center">
+                        <img src="/img/Minimaliste_Living_Room.png" alt="Nature" class="w-full h-full object-cover max-h-[23rem]">
                         <a href="#" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
                     </div>
                 </div>
@@ -122,9 +122,9 @@
 
                 <div class="collapse collapse-arrow bg-neutral-950/50 rounded-xl">
                     <input type="checkbox" />
-                    <div class="collapse-title font-semibold">Peut-on vous confier un projet à distance ?</div>
+                    <div class="collapse-title font-semibold">Vous voulez proposer un projet à distance ?</div>
                     <div class="collapse-content text-sm flex flex-col font-light gap-2">
-                        <p>Oui, il est tout à fait possible de confier un projet à distance. Grâce aux outils numériques, nous pouvons échanger, collaborer et suivre l’avancement du projet de manière fluide, tout en respectant vos attentes et délais.</p>
+                        <p>Il est tout à fait possible de nous confier un projet à distance. Grâce aux outils numériques, nous pouvons échanger, collaborer et suivre l’avancement du projet de manière fluide, tout en respectant vos attentes et délais.</p>
                     </div>
                 </div>
             </div>
@@ -133,7 +133,7 @@
 
 
         <!-- NOUS CONTACTER -->
-        <section class="flex flex-col justify-center gap-4 py-16 text-white">
+        <section class="flex flex-col justify-center gap-4 py-16 text-white" id="contact">
             <span class="text-3xl lg:text-5xl uppercase font-bold">Nous contacter</span>
 
             <div class="flex flex-col lg:flex-row gap-4">
@@ -152,10 +152,8 @@
                     <div class="flex flex-col gap-1">
                         <span class="font-bold">Réseaux sociaux :</span>
                         <ul>
-                            <li><a href="https://www.facebook.com/lume" target="_blank">Facebook</a></li>
                             <li><a href="https://www.instagram.com/lume" target="_blank">Instagram</a></li>
                             <li><a href="https://www.linkedin.com/company/lume" target="_blank">LinkedIn</a></li>
-                            <li><a href="https://twitter.com/lume" target="_blank">Twitter</a></li>
                         </ul>
                     </div>
 
@@ -165,7 +163,7 @@
                     </div>
                 </div>
 
-                <img src="./img/Minimalist_villa.png" alt="" class="lg:w-[50%]">
+                <img src="./img/Minimalist_villa.png" alt="" class="lg:w-[50%] max-h-[40rem] object-cover object-bottom">
             </div>
     </main>
 
