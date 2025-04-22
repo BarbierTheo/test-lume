@@ -26,7 +26,7 @@
 
         <!-- CONSTRUIRE, IMAGINER, REINVENTER -->
         <section class="flex flex-col justify-center gap-4 py-16 text-white">
-            <div class="flex flex-col text-3xl lg:text-5xl uppercase font-bold leading-8 lg:leading-12">
+            <div class="flex flex-col leading-8 lg:leading-12 title1">
                 <span>Construire,</span>
                 <span>imaginer,</span>
                 <span>réinventer</span>
@@ -38,7 +38,7 @@
                         <span>Fondée en 2024, notre agence conçoit des espaces durables, élégants et fonctionnels. Nous accompagnons particuliers et professionnels dans la réalisation de projets uniques, pensés pour s’intégrer harmonieusement à leur environnement.</span>
                         <span>Entre créativité et rigueur, notre équipe pluridisciplinaire mêle expertise technique et sensibilité artistique pour imaginer les lieux de demain.</span>
                     </div>
-                    <a href="" class="border-2 border-white text-white font-semibold rounded-full py-4 px-16 w-fit hover:!bg-white hover:text-zinc-800 transition-all duration-300 self-center lg:self-start mt-4 lg:mt-0">En savoir plus</a>
+                    <a href="/src/View/view-about.php" class="btn-secondaire self-center lg:self-start mt-4 lg:mt-0">En savoir plus</a>
                 </div>
             </div>
         </section>
@@ -46,7 +46,7 @@
 
         <!-- NOS PROJETS -->
         <section class="flex flex-col justify-center gap-4 py-16 text-white">
-            <span class="text-3xl lg:text-5xl uppercase font-bold">La galerie</span>
+            <span class="title1">La galerie</span>
 
             <!-- <div class="flex gap-4 flex-wrap">
                 <button class="py-2 px-3 font-semibold !bg-zinc-100 rounded-full text-black !text-sm !uppercase cursor-pointer">Tous</button>
@@ -91,13 +91,13 @@
                 </div>
             </div>
             <div class="flex justify-end my-2">
-                <a href="" class="!bg-orange-50 text-black font-semibold rounded-full py-4 px-8 w-fit hover:!bg-orange-200 transition-all duration-300">Découvrez nos projets</a>
+                <a href="" class="btn-principal">Découvrez nos projets</a>
             </div>
         </section>
 
         <!-- FAQ -->
         <section class="flex flex-col justify-center gap-4 py-16 text-white">
-            <span class="text-3xl lg:text-5xl uppercase font-bold">Des questions ?</span>
+            <span class="title1">Des questions ?</span>
             <div class="flex gap-1 flex-wrap">
                 <span>Vous ne trouvez pas les réponses que vous cherchez ?</span>
                 <a href="" class="font-semibold">Contactez-nous</a>
@@ -135,7 +135,7 @@
 
         <!-- NOUS CONTACTER -->
         <section class="flex flex-col justify-center gap-4 py-16 text-white" id="contact">
-            <span class="text-3xl lg:text-5xl uppercase font-bold">Nous contacter</span>
+            <span class="title1">Nous contacter</span>
 
             <div class="flex flex-col lg:flex-row gap-4">
                 <div class="flex flex-col lg:w-[50%] gap-6 text-left lg:text-right">

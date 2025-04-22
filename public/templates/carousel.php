@@ -17,8 +17,8 @@
                                 </div>
                                 <div class="w-[90%] lg:w-[50%] flex flex-col justify-end gap-8 lg:gap-0">
                                     <div class="flex flex-col md:flex-row gap-2 lg:gap-8 items-center lg:items-start w-full justify-end">
-                                        <a href="" class="!bg-orange-50 text-black font-semibold rounded-full py-4 px-8 w-fit hover:!bg-orange-200 transition-all duration-300">Commençons à travailler</a>
-                                        <a href="" class="border-2 border-white text-white font-semibold rounded-full py-4 px-16 w-fit hover:!bg-white hover:text-zinc-800 transition-all duration-300">Découvrez nous</a>
+                                        <a href="" class="btn-principal">Commençons à travailler</a>
+                                        <a href="" class="btn-secondaire">Découvrez nous</a>
                                     </div>
                                 </div>
                             </div>
@@ -39,15 +39,15 @@
                                 <div class="w-[90%] lg:w-[50%] flex flex-col justify-between lg:min-h-[22vh] gap-2">
                                     <span class="text-3xl lg:text-[5rem] font-bold">SHAPE YOUR SPACES</span>
                                     <div class="flex flex-col text-md lg:text-xl font-semibold">
-                                        <span>Nous façonnons des espaces qui inspirent.  </span>
+                                        <span>Nous façonnons des espaces qui inspirent. </span>
                                         <span>Un design sur-mesure pour chaque projet unique.</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="w-[90%] lg:w-[50%] flex flex-col justify-end gap-8 lg:gap-0">
                                     <div class="flex flex-col md:flex-row gap-2 lg:gap-8 items-center lg:items-start w-full justify-end">
-                                        <a href="" class="!bg-orange-50 text-black font-semibold rounded-full py-4 px-8 w-fit hover:!bg-orange-200 transition-all duration-300">Commençons à travailler</a>
-                                        <a href="" class="border-2 border-white text-white font-semibold rounded-full py-4 px-16 w-fit hover:!bg-white hover:text-zinc-800 transition-all duration-300">Découvrez nous</a>
+                                        <a href="" class="btn-principal">Commençons à travailler</a>
+                                        <a href="" class="btn-secondaire">Découvrez nous</a>
                                     </div>
                                 </div>
                             </div>
