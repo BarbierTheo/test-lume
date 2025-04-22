@@ -3,7 +3,7 @@
     <div class="swiper-wrapper">
 
         <div class="swiper-slide">
-            <div class="bg-[url('../img/Concours_urbain.png')] w-screen h-screen bg-center bg-no-repeat bg-cover z-5 flex justify-start">
+            <div class="bg-[url('../img/carousel/carousel1.avif')] w-screen h-screen bg-center bg-no-repeat bg-cover z-5 flex justify-start">
                 <main class="h-screen w-screen flex flex-col justify-end">
                     <div class="lg:p-18  p-8 gap-2 z-20">
                         <div class="flex flex-col text-orange-50 w-full gap-4">
@@ -31,7 +31,7 @@
         </div>
 
         <div class="swiper-slide">
-            <div class="bg-[url('../img/da_nang.png')] w-screen h-screen bg-center bg-no-repeat bg-cover z-5 flex justify-start">
+            <div class="bg-[url('../img/carousel/carousel2.avif')] w-screen h-screen bg-center bg-no-repeat bg-cover z-5 flex justify-start">
                 <main class="h-screen w-screen flex flex-col justify-end">
                     <div class="lg:p-18 p-8 gap-2 z-20">
                         <div class="flex flex-col text-orange-50 w-full gap-4">

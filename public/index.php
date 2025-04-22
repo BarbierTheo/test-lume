@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -18,8 +18,9 @@
 
 <body class="bg-neutral-950/80">
 
-    <?php include_once "../templates/menu.php" ?>
-    <?php include_once "../templates/carousel.php" ?>
+    <?php include_once "./loader.php" ?>
+    <?php include_once "./templates/menu.php" ?>
+    <?php include_once "./templates/carousel.php" ?>
 
     <main class="lg:max-w-[1200px] px-4 lg:mx-auto">
 
@@ -31,7 +32,7 @@
                 <span>réinventer</span>
             </div>
             <div class="flex flex-col lg:flex-row gap-4">
-                <img src="./img/terrasse.png" alt="" class="lg:w-[50%] max-h-[40rem] object-cover">
+                <img src="./img/index/terrasse.avif" alt="" class="lg:w-[50%] max-h-[40rem] object-cover">
                 <div class="flex flex-col lg:w-[50%] justify-between">
                     <div class="flex flex-col gap-2">
                         <span>Fondée en 2024, notre agence conçoit des espaces durables, élégants et fonctionnels. Nous accompagnons particuliers et professionnels dans la réalisation de projets uniques, pensés pour s’intégrer harmonieusement à leur environnement.</span>
@@ -57,34 +58,34 @@
             <div class="grid grid-cols-3 grid-rows-2 gap-4">
 
                 <div class="row-span-2 flex flex-col gap-2">
-                    <a href="" class="flex justify-between items-center">
+                    <!-- <a href="" class="flex justify-between items-center">
                         <span class="text-sm font-bold">SEBHA</span>
                         <span class="text-sm font-light">2025</span>
-                    </a>
+                    </a> -->
                     <div class="relative h-full">
-                        <img src="/img/sweet_home.png" alt="Nature" class="w-full h-full object-cover max-h-[50rem]">
+                        <img src="./img/index/galerie/Kitchen_3.avif" alt="Nature" class="w-full h-full object-cover max-h-[50rem]">
                         <a href="#" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
                     </div>
                 </div>
 
                 <div class="col-span-2 flex flex-col gap-2">
-                    <a href="" class="flex justify-between items-center">
+                    <!-- <a href="" class="flex justify-between items-center">
                         <span class="text-sm font-bold">SEBHA</span>
                         <span class="text-sm font-light">2025</span>
-                    </a>
+                    </a> -->
                     <div class="relative h-full">
-                        <img src="/img/Interior_design.png" alt="Nature" class="w-full h-full object-cover max-h-[23rem]">
+                        <img src="./img/index/galerie/Minimaliste_Living_Room.avif" alt="Nature" class="w-full h-full object-cover max-h-[23rem]">
                         <a href="#" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
                     </div>
                 </div>
 
                 <div class="col-span-2 flex flex-col gap-2">
-                    <a href="" class="flex justify-between items-center">
+                    <!-- <a href="" class="flex justify-between items-center">
                         <span class="text-sm font-bold">SEBHA</span>
                         <span class="text-sm font-light">2025</span>
-                    </a>
+                    </a> -->
                     <div class="relative h-full">
-                        <img src="/img/Minimaliste_Living_Room.png" alt="Nature" class="w-full h-full object-cover max-h-[23rem]">
+                        <img src="./img/index/galerie/Interior_Design.avif" alt="Nature" class="w-full h-full object-cover max-h-[23rem]">
                         <a href="#" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
                     </div>
                 </div>
@@ -163,16 +164,17 @@
                     </div>
                 </div>
 
-                <img src="./img/Minimalist_villa.png" alt="" class="lg:w-[50%] max-h-[40rem] object-cover object-bottom">
+                <img src="./img/index/Minimalist_Villa.avif" alt="" class="lg:w-[50%] max-h-[40rem] object-cover object-bottom">
             </div>
     </main>
 
 
-    <?php include_once "../templates/footer.php" ?>
+    <?php include_once "./templates/footer.php" ?>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./js/scriptmenucarousel.js"></script>
+    <script type="module" src="./js/loader.js"></script>
 </body>
 
 </html>

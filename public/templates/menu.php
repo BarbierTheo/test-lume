@@ -36,12 +36,12 @@
 <header class="navbar fixed z-20 flex justify-between p-4 items-center">
 
     <div class="">
-        <a href="index.php" class="logo pt-6 h-full"> <img src="img/testlogo.png" alt="" class="ml-6 w-32 lg:w-38 self-center"></a>
+        <a href="/index.php" class="logo pt-6 h-full"> <img src="../img/testlogo.png" alt="" class="ml-6 w-32 lg:w-38 self-center"></a>
     </div>
 
     <div class="hidden lg:flex">
         <ul class="menu menu-horizontal px-1 mr-4 flex xl:gap-6 text-lg uppercase font-semibold">
-            <li><a href="index.php">Accueil</a></li>
+            <li><a href="/index.php">Accueil</a></li>
             <li>
                 <div class="dropdown dropdown-center">
                     <label tabindex="0" class="">Services</label>
@@ -53,7 +53,7 @@
                 </div>
             </li>
             <li><a>Portfolio</a></li>
-            <li><a>A propos</a></li>
+            <li><a href="../templates/about.php">A propos</a></li>
             <li><a href="index.php#contact">Contact</a></li>
         </ul>
     </div>
