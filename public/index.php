@@ -46,7 +46,7 @@
 
         <!-- NOS PROJETS -->
         <section class="flex flex-col justify-center gap-4 py-16 text-white">
-            <span class="title1">La galerie</span>
+            <span class="title1">Galerie</span>
 
             <!-- <div class="flex gap-4 flex-wrap">
                 <button class="py-2 px-3 font-semibold !bg-zinc-100 rounded-full text-black !text-sm !uppercase cursor-pointer">Tous</button>
@@ -166,6 +166,7 @@
 
                 <img src="./img/index/Minimalist_Villa.avif" alt="" class="lg:w-[50%] max-h-[40rem] object-cover object-bottom">
             </div>
+        </section>
     </main>
 
 

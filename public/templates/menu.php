@@ -53,9 +53,9 @@
                 </div> -->
                 <a href="/src/View/view-services.php">Services</a></li>
             </li>
-            <li><a>Portfolio</a></li>
+            <li><a href="/src/View/view-gallery.php">Galerie</a></li>
             <li><a href="/src/View/view-about.php">A propos</a></li>
-            <li><a href="index.php#contact">Contact</a></li>
+            <li><a href="/src/View/view-contact.php">Contact</a></li>
         </ul>
     </div>
 
@@ -77,9 +77,9 @@
                     </div> -->
                     <a href="/src/View/view-services.php">Services</a>
                 </li>
-                <li class="p-2"><a>Portfolio</a></li>
+                <li class="p-2"><a href="/src/View/view-gallery.php">Galerie</a></li>
                 <li class="p-2"><a a href="/src/View/view-about.php">A propos</a></li>
-                <li class="p-2"><a href="index.php#contact">Contact</a></li>
+                <li class="p-2"><a href="/src/View/view-contact.php">Contact</a></li>
             </ul>
         </div>
     </div>
