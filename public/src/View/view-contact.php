@@ -32,33 +32,41 @@
 <main class="lg:max-w-[1200px] min-h-[100vh] px-4 lg:mx-auto flex flex-col gap-24 mt-8 mb-32">
     <section class="flex flex-col justify-center gap-4 py-16 text-white" id="contact">
         <span class="title1">Nous contacter</span>
-        <span class="mb-8">Notre équipe est disponible pour vous accompagner sur l’ensemble des services proposés sur ce site : conception architecturale, rénovation, aménagement intérieur ou suivi de chantier. N’hésitez pas à nous contacter pour échanger autour de vos besoins — chaque projet est une opportunité de créer ensemble un espace à votre image.</span>
-
+        <span>Notre équipe est disponible pour vous accompagner sur l’ensemble des services proposés sur ce site : conception architecturale, rénovation, aménagement intérieur ou suivi de chantier. N’hésitez pas à nous contacter pour échanger autour de vos besoins — chaque projet est une opportunité de créer ensemble un espace à votre image.</span>
+        <span class="mb-8">Si vous voulez nous transmettre des plans, photos ou autres images, n'hésitez pas à nous partager un lien Dropbox ou Wetransfer.</span>
         <div class="flex flex-col lg:flex-row gap-4">
             <div class="flex flex-col lg:w-[50%] gap-6 text-left lg:text-right">
 
-                <div class="flex flex-col gap-1">
-                    <span class="font-bold">Email :</span>
-                    <a href="mailto:contact@lume.com">contact@lume.com</a>
-                </div>
+                <form action="" class="w-full">
+                    <fieldset class="fieldset w-full gap-2">
 
-                <div class="flex flex-col gap-1">
-                    <span class="font-bold">Téléphone :</span>
-                    <a href="tel:+bipboubap">+33 bipboubap</a>
-                </div>
+                        <label class="label">Sujet</label>
+                        <select class="select w-full">
+                            <option disabled selected>La raison du contact</option>
+                            <option>Devis</option>
+                            <option>Projets</option>
+                            <option>Renseignements</option>
+                            <option>Autres</option>
+                        </select>
 
-                <div class="flex flex-col gap-1">
-                    <span class="font-bold">Réseaux sociaux :</span>
-                    <ul>
-                        <li><a href="https://www.instagram.com/lume" target="_blank">Instagram</a></li>
-                        <li><a href="https://www.linkedin.com/company/lume" target="_blank">LinkedIn</a></li>
-                    </ul>
-                </div>
+                        <label class="label">Nom</label>
+                        <input type="text" class="input w-full" placeholder="Dupont" />
 
-                <div class="flex flex-col gap-1">
-                    <span class="font-bold">Horaires :</span>
-                    <span>Lundi - Vendredi : 9h - 18h</span>
-                </div>
+                        <label class="label">Prénom</label>
+                        <input type="text" class="input w-full" placeholder="Alexis" />
+
+                        <label class="label">E-mail</label>
+                        <input type="email" class="input w-full" placeholder="dpt.alex@gmail.com" />
+
+                        <label class="label">Téléphone</label>
+                        <input type="tel" class="input w-full" placeholder="050608070" />
+
+                        <label class="label">Message</label>
+                        <textarea class="textarea w-full max-h-[18rem]" placeholder="La limite est de 250 caractères"></textarea>
+                        
+                    </fieldset>
+                </form>
+                <button class="mt-16 btn-principal self-end">Envoyer</button>
             </div>
 
             <img src="/img/index/Minimalist_Villa.avif" alt="" class="lg:w-[50%] max-h-[40rem] object-cover object-bottom">

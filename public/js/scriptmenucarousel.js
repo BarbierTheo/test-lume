@@ -162,11 +162,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Menu ouverture services
 
-document.getElementById('servicesMenu').addEventListener('click', () => {
+// document.getElementById('servicesMenu').addEventListener('click', () => {
 
-  document.getElementById('showServices').classList.toggle('flex')
-  document.getElementById('showServices').classList.toggle('hidden')
+//   document.getElementById('showServices').classList.toggle('flex')
+//   document.getElementById('showServices').classList.toggle('hidden')
 
-})
+// })
 
 });

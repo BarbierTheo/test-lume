@@ -49,7 +49,7 @@
 /* https://www.youtube.com/watch?v=dAIVbLrAb_U */
 
 
-:root {
+/* :root {
   --bar-width: 50px;
   --bar-height: 4px;
   --hamburger-gap: 6px;
@@ -118,11 +118,25 @@
 .hamburger-menu input:checked {
   opacity: 0;
   width: 0;
+} */
+
+.zoom-carousel {
+  animation: zoomSlow 20s ease-in-out forwards;
+}
+
+@keyframes zoomSlow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 
+
 .btn-principal {
-  @apply !bg-orange-50 text-black font-semibold rounded-full py-4 px-8 w-fit hover:!bg-zinc-300 transition-all duration-300;
+  @apply !bg-orange-50 text-black font-semibold rounded-full py-4 px-8 w-fit hover:!bg-zinc-300 transition-all duration-300 cursor-pointer;
 }
 
 .btn-secondaire {
