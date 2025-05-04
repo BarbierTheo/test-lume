@@ -7,7 +7,7 @@
     <!-- Interface -->
     <section class="min-w-[80%] min-h-screen p-4 lg:p-16 flex flex-col gap-4">
 
-        <div class="flex flex-col lg:flex-row w-full min-h-[10vh] gap-4">
+        <div class="flex flex-col lg:flex-row w-full gap-4">
 
             <!-- Data projets -->
             <div class="flex flex-col bg-neutral-900 rounded-lg lg:w-[70%]">
@@ -33,13 +33,14 @@
                     </li>
                 </ul>
             </div>
+
             <!-- Ajouter projet -->
-            <button class="flex flex-col gap-2 w-full lg:w-[30%] items-center justify-center bg-neutral-200 hover:bg-neutral-300 text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer shadow-md py-4">
+            <a href="/src/View/view-dashboard-portfolio-add.php" class="flex flex-col gap-2 w-full lg:w-[30%] items-center justify-center !bg-neutral-200 hover:bg-neutral-300 text-neutral-800 rounded-lg font-semibold shadow-md py-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(32, 32, 32, 1);">
                     <path d="M20 5h-9.586L8.707 3.293A.997.997 0 0 0 8 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zm-4 9h-3v3h-2v-3H8v-2h3V9h2v3h3v2z"></path>
                 </svg>
                 Ajouter un projet
-            </button>
+            </a>
         </div>
 
         <!-- Barre rechercher -->
@@ -53,6 +54,7 @@
             </button>
         </div>
 
+        <!-- Apparition des projets -->
         <div class="h-full w-full bg-neutral-900 rounded-lg shadow-md">
 
             <ul class="list h-full">
@@ -69,14 +71,15 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-4">
-                        <button class="btn">
+                        <a href="/src/View/view-dashboard-portfolio-modify.php" class="btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)">
                                 <path d="m2.344 15.271 2 3.46a1 1 0 0 0 1.366.365l1.396-.806c.58.457 1.221.832 1.895 1.112V21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.598a8.094 8.094 0 0 0 1.895-1.112l1.396.806c.477.275 1.091.11 1.366-.365l2-3.46a1.004 1.004 0 0 0-.365-1.366l-1.372-.793a7.683 7.683 0 0 0-.002-2.224l1.372-.793c.476-.275.641-.89.365-1.366l-2-3.46a1 1 0 0 0-1.366-.365l-1.396.806A8.034 8.034 0 0 0 15 4.598V3a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v1.598A8.094 8.094 0 0 0 7.105 5.71L5.71 4.904a.999.999 0 0 0-1.366.365l-2 3.46a1.004 1.004 0 0 0 .365 1.366l1.372.793a7.683 7.683 0 0 0 0 2.224l-1.372.793c-.476.275-.641.89-.365 1.366zM12 8c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4z"></path>
                             </svg>
                             Modifier
-                        </button>
+                        </a>
                     </div>
                 </li>
+
                 <li class="list-row flex justify-between">
                     <div class="flex gap-8 items-center">
 
@@ -90,12 +93,12 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-4">
-                        <button class="btn">
+                        <a href="/src/View/view-dashboard-portfolio-modify.php" class="btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)">
                                 <path d="m2.344 15.271 2 3.46a1 1 0 0 0 1.366.365l1.396-.806c.58.457 1.221.832 1.895 1.112V21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.598a8.094 8.094 0 0 0 1.895-1.112l1.396.806c.477.275 1.091.11 1.366-.365l2-3.46a1.004 1.004 0 0 0-.365-1.366l-1.372-.793a7.683 7.683 0 0 0-.002-2.224l1.372-.793c.476-.275.641-.89.365-1.366l-2-3.46a1 1 0 0 0-1.366-.365l-1.396.806A8.034 8.034 0 0 0 15 4.598V3a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v1.598A8.094 8.094 0 0 0 7.105 5.71L5.71 4.904a.999.999 0 0 0-1.366.365l-2 3.46a1.004 1.004 0 0 0 .365 1.366l1.372.793a7.683 7.683 0 0 0 0 2.224l-1.372.793c-.476.275-.641.89-.365 1.366zM12 8c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4z"></path>
                             </svg>
                             Modifier
-                        </button>
+                        </a>
                     </div>
                 </li>
 

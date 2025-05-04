@@ -35,18 +35,24 @@
                     </svg>
                     Portfolio
                 </a>
-                <button class="px-4 py-2 flex items-center gap-4 font-semibold cursor-pointer hover:bg-neutral-800 rounded-lg">
+                <a href="/src/View/view-dashboard-faq.php" class="px-4 py-2 flex items-center gap-4 font-semibold cursor-pointer hover:bg-neutral-800 rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
                         <path d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758a2.01 2.01 0 0 1 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.08.182.15.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.046.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.01 2.01 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 15h-4.758a4.03 4.03 0 0 0-2.242.689V6c0-.551.448-1 1-1h6v13z"></path>
                     </svg>
                     F.A.Q.
-                </button>
+                </a>
+
+                <div class="flex flex-col mt-8 gap-2 justify-center items-center">
+                    <a href="" class="btn">Déconnexion</a>
+                    <a href="/index.php" class="text-neutral-400 underline">Accès au site</a>
+                </div>
+
             </div>
         </div>
     </div>
 
     <!-- Format desktop -->
-    <aside class="bg-neutral-900/50 hidden lg:flex flex-col h-full p-4 items-center py-12 justify-between">
+    <aside class="bg-neutral-900/50 hidden lg:flex flex-col h-full p-4 items-center py-12 justify-start">
         <div class="flex flex-col gap-2">
             <a href="/src/View/view-dashboard.php" class="self-center mb-16"><img src="../../img/logosansm.png" alt="" class="w-32"></a>
 
@@ -63,15 +69,16 @@
                 </svg>
                 Portfolio
             </a>
-            <button class="px-4 py-2 flex items-center gap-4 font-semibold cursor-pointer hover:bg-neutral-800 rounded-lg">
+            <a href="/src/View/view-dashboard-faq.php" class="px-4 py-2 flex items-center gap-4 font-semibold cursor-pointer hover:bg-neutral-800 rounded-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
                     <path d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758a2.01 2.01 0 0 1 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.08.182.15.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.046.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.01 2.01 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 15h-4.758a4.03 4.03 0 0 0-2.242.689V6c0-.551.448-1 1-1h6v13z"></path>
                 </svg>
                 F.A.Q.
-            </button>
+            </a>
         </div>
-        <div class="flex flex-col">
-            <a href="" class="text-neutral-400 underline">Accès au site</a>
+        <div class="flex flex-col mt-80 gap-4 justify-center items-center">
+            <a href="" class="btn">Déconnexion</a>
+            <a href="/index.php" class="text-neutral-400 underline">Accès au site</a>
         </div>
     </aside>
 </nav>

@@ -102,19 +102,19 @@
             </div>
 
         </div>
-        <div class="flex flex-col md:flex-row w-full min-h-[10%] gap-4">
-            <button class="flex flex-col gap-2 w-full md:w-[50%] items-center justify-center bg-neutral-200 hover:bg-neutral-300 text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer shadow-md py-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(32, 32, 32, 1);">
+        <div class="flex flex-col md:flex-row w-full min-h-[15%] gap-4">
+            <a href="/src/View/view-dashboard-portfolio-add.php" class="flex flex-col gap-2 w-full md:w-[50%] items-center justify-center !bg-neutral-200 hover:!bg-neutral-300 text-neutral-800 rounded-lg font-semibold cursor-pointer shadow-md py-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(50, 50, 50, 1);">
                     <path d="M20 5h-9.586L8.707 3.293A.997.997 0 0 0 8 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zm-4 9h-3v3h-2v-3H8v-2h3V9h2v3h3v2z"></path>
                 </svg>
                 Ajouter un projet
-            </button>
-            <button class="flex flex-col gap-2 w-full md:w-[50%] items-center justify-center bg-neutral-200 hover:bg-neutral-300 text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer shadow-md py-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(32, 32, 32, 1);">
+            </a>
+            <a href="/src/View/view-dashboard-faq-add.php" class="flex flex-col gap-2 w-full md:w-[50%] items-center justify-center !bg-neutral-200 hover:!bg-neutral-300 text-neutral-800 rounded-lg font-semibold cursor-pointer shadow-md py-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(50, 50, 50, 1);">
                     <path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path>
                 </svg>
                 Ajouter un article
-            </button>
+            </a>
         </div>
 
         <!-- Derniers messages -->
