@@ -1,7 +1,7 @@
 services:
   web:
     image: php:8.2-apache
-    container_name: php-apache
+    container_name: php-apachelume
     volumes:
       - ./public:/var/www/html
       - ./templates:/var/www/templates
@@ -24,7 +24,7 @@ services:
 
   db:
     image: mysql:8.0
-    container_name: mysql-db
+    container_name: mysql-dblume
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -37,7 +37,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
+    container_name: phpmyadminlume
     depends_on:
       - db
     ports:
