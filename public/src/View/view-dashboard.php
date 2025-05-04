@@ -1,11 +1,11 @@
 <?php include_once "../../templates/head.php" ?>
 
-<main class="min-h-screen min-w-screen flex flex-col lg:flex-row">
+<main class="min-h-screen w-screen flex flex-col lg:flex-row">
 
     <?php include_once "../../templates/navbaradmin.php" ?>
 
     <!-- Interface -->
-    <section class="min-w-[80%] min-h-screen p-4 lg:p-16 flex flex-col gap-6">
+    <section class="min-w-[80%] min-h-screen p-4 lg:p-16 flex flex-col gap-4">
 
         <!-- Indicateurs data + messages -->
         <div class="flex flex-col lg:flex-row lg:max-h-[50%] w-full gap-6">
@@ -56,9 +56,9 @@
             </div>
 
             <!-- Suivi message -->
-            <div class="flex flex-col bg-neutral-900 rounded-lg w-full justify-center">
+            <div class="flex flex-col bg-neutral-900 rounded-lg w-full">
+                <span class="p-4 pb-2 opacity-60 tracking-wide text-sm">Suivi des messages</span>
                 <ul class="list">
-                    <li class="p-4 pb-2 opacity-60 tracking-wide">Suivi des messages</li>
                     <li class="list-row">
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(255, 0, 0);">
@@ -100,21 +100,24 @@
                     </li>
                 </ul>
             </div>
+
         </div>
         <div class="flex flex-col md:flex-row w-full min-h-[10%] gap-4">
-            <button class="flex flex-col gap-2 w-full md:w-[50%] items-center justify-center bg-neutral-200 text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer shadow-md py-4">
+            <button class="flex flex-col gap-2 w-full md:w-[50%] items-center justify-center bg-neutral-200 hover:bg-neutral-300 text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer shadow-md py-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(32, 32, 32, 1);">
                     <path d="M20 5h-9.586L8.707 3.293A.997.997 0 0 0 8 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zm-4 9h-3v3h-2v-3H8v-2h3V9h2v3h3v2z"></path>
                 </svg>
                 Ajouter un projet
             </button>
-            <button class="flex flex-col gap-2 w-full md:w-[50%] items-center justify-center bg-neutral-200 text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer shadow-md py-4">
+            <button class="flex flex-col gap-2 w-full md:w-[50%] items-center justify-center bg-neutral-200 hover:bg-neutral-300 text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer shadow-md py-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(32, 32, 32, 1);">
                     <path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path>
                 </svg>
                 Ajouter un article
             </button>
         </div>
+
+        <!-- Derniers messages -->
         <div class="h-full w-full bg-neutral-900 rounded-lg shadow-md">
 
             <ul class="list h-full">
