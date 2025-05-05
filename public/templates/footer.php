@@ -8,7 +8,7 @@
     <div class="flex flex-col gap-2 my-2">
         <a href="/index.php">Accueil</a>
         <a href="/src/View/view-services.php">Services</a>
-        <a href="/src/View/view-gallery.php">Galerie</a>
+        <a href="/src/View/view-gallery.php">Portfolio</a>
         <a href="/src/View/view-about.php">A propos</a>
         <a href="/src/View/view-contact.php">Contact</a>
     </div>

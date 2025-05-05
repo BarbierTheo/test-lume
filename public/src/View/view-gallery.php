@@ -29,49 +29,32 @@
 </section>
 
 
-<main class="lg:max-w-[1200px] min-h-[100vh] px-4 lg:mx-auto flex flex-col gap-24 mt-8 mb-32">
+<main class="lg:max-w-[1200px] px-4 lg:mx-auto flex flex-col gap-24 mt-8 mb-32">
 
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4" id="lightgallery">
-        <div class="grid gap-4">
-            <a href="/img/Minimalist_Villa.png">
-                <img class="h-auto max-w-full" src="../../img/Minimalist_Villa.png" alt="">
-            </a>
-            <a  href="/img/Minimalist_Villa_2.png">
-                <img class="h-auto max-w-full" src="../../img/Minimalist_Villa_2.png" alt="">
-            </a>
-            <a  href="/img/Minimalist_Villa_3.png">
-                <img class="h-auto max-w-full" src="../../img/Minimalist_Villa_3.png" alt="">
-            </a>
-        </div>
-        <div class="grid gap-4">
-            <a  href="https://picsum.photos/id/1018/1000/600">
-                <img class="h-auto max-w-full" src="../../img/The_living_Room.png" alt="">
-            </a>
-            <a  href="https://picsum.photos/id/1018/1000/600">
-                <img class="h-auto max-w-full" src="../../img/Sweet_Home.png" alt="">
-            </a>
-            <a  href="https://picsum.photos/id/1018/1000/600">
-                <img class="h-auto max-w-full" src="../../img/Royal_Bedroom.png" alt="">
-            </a>
-            <a  href="https://picsum.photos/id/1018/1000/600">
-                <img class="h-auto max-w-full" src="../../img/Residential_Court_Yard.png" alt="">
-            </a>
-        </div>
-        <div class="grid gap-4">
-            <a  href="https://picsum.photos/id/1018/1000/600">
-                <img class="h-auto max-w-full" src="../../img/Nature.png" alt="">
-            </a>
-            <a  href="https://picsum.photos/id/1018/1000/600">
-                <img class="h-auto max-w-full" src="../../img/Nature_Villa.png" alt="">
-            </a>
-            <a  href="https://picsum.photos/id/1018/1000/600">
-                <img class="h-auto max-w-full" src="../../img/Nature_Residential_2.png" alt="">
-            </a>
-        </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+
+        <a href="/src/View/view-projects.php" class="relative w-full min-h-full">
+            <img src="../../img/Minimalist_Villa.png" alt="Façade de l'université" class="w-full h-[90%] object-cover object-center">
+            <div class="flex justify-between mt-2">
+                <span class="uppercase font-semibold">université du Havre</span>
+                <span class="opacity-60">2025</span>
+            </div>
+        </a>
+        <a href="/src/View/view-projects.php" class="relative w-full min-h-full">
+            <img src="../../img/Minimalist_Villa_2.png" alt="Façade de l'université" class="w-full h-[90%] object-cover object-center">
+            <div class="flex justify-between mt-2">
+                <span class="uppercase font-semibold">université du Havre</span>
+                <span class="opacity-60">2025</span>
+            </div>
+        </a> <a href="/src/View/view-projects.php" class="relative w-full min-h-full">
+            <img src="../../img/Minimalist_Villa_3.png" alt="Façade de l'université" class="w-full h-[90%] object-cover object-center">
+            <div class="flex justify-between mt-2">
+                <span class="uppercase font-semibold">université du Havre</span>
+                <span class="opacity-60">2025</span>
+            </div>
+        </a>
     </div>
-
-
 
 
 </main>

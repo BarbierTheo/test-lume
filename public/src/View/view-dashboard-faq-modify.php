@@ -9,12 +9,12 @@
         <!-- En-tête -->
         <div class="flex justify-between">
             <span class="text-xl font-semibold">Modifier un article</span>
-            <div>
+            <div class="flex flex-col justify-end lg:flex-row">
                 <button class="btn !bg-red-600/30">Supprimer</button>
-                <a href="/src/View/view-dashboard-faq.php" class="btn">Annuler</a>
+                <a href="/src/View/view-dashboard-portfolio.php" class="btn">Annuler</a>
             </div>
         </div>
-        <!-- IMG du projet -->
+        <!-- Modification du projet -->
         <div class="bg-neutral-900 rounded-lg shadow-md w-full p-4 flex flex-col gap-2">
 
             <span class="text-md font-semibold px-4 pt-2">Pourquoi faire appel à un architecte pour mon projet ?</span>

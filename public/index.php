@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="bg-neutral-950/80">
+<body class="bg-neutral-800/30">
 
     <?php include_once "./loader.php" ?>
     <?php include_once "./templates/menu.php" ?>
@@ -46,7 +46,7 @@
 
         <!-- NOS PROJETS -->
         <section class="flex flex-col justify-center gap-4 py-16 text-white">
-            <span class="title1">Galerie</span>
+            <span class="title1">Portfolio</span>
 
             <!-- <div class="flex gap-4 flex-wrap">
                 <button class="py-2 px-3 font-semibold !bg-zinc-100 rounded-full text-black !text-sm !uppercase cursor-pointer">Tous</button>
@@ -58,10 +58,10 @@
             <div class="grid grid-cols-3 grid-rows-2 gap-4">
 
                 <div class="row-span-2 flex flex-col gap-2">
-                    <!-- <a href="" class="flex justify-between items-center">
+                    <a href="" class="flex justify-between items-center">
                         <span class="text-sm font-bold">SEBHA</span>
                         <span class="text-sm font-light">2025</span>
-                    </a> -->
+                    </a>
                     <div class="relative h-full">
                         <img src="./img/index/galerie/Kitchen_3.avif" alt="Nature" class="w-full h-full object-cover max-h-[50rem]">
                         <a href="#" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
@@ -69,10 +69,10 @@
                 </div>
 
                 <div class="col-span-2 flex flex-col gap-2">
-                    <!-- <a href="" class="flex justify-between items-center">
+                    <a href="" class="flex justify-between items-center">
                         <span class="text-sm font-bold">SEBHA</span>
                         <span class="text-sm font-light">2025</span>
-                    </a> -->
+                    </a>
                     <div class="relative h-full">
                         <img src="./img/index/galerie/Minimaliste_Living_Room.avif" alt="Nature" class="w-full h-full object-cover max-h-[23rem]">
                         <a href="#" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
@@ -80,10 +80,10 @@
                 </div>
 
                 <div class="col-span-2 flex flex-col gap-2">
-                    <!-- <a href="" class="flex justify-between items-center">
+                    <a href="" class="flex justify-between items-center">
                         <span class="text-sm font-bold">SEBHA</span>
                         <span class="text-sm font-light">2025</span>
-                    </a> -->
+                    </a>
                     <div class="relative h-full">
                         <img src="./img/index/galerie/Interior_Design.avif" alt="Nature" class="w-full h-full object-cover max-h-[23rem]">
                         <a href="#" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>

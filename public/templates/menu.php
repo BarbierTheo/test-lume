@@ -51,9 +51,10 @@
                         <li><a>Rendus & Visuels 3D</a></li>
                     </ul>
                 </div> -->
-                <a href="/src/View/view-services.php">Services</a></li>
+                <a href="/src/View/view-services.php">Services</a>
             </li>
-            <li><a href="/src/View/view-gallery.php">Galerie</a></li>
+            </li>
+            <li><a href="/src/View/view-gallery.php">Portfolio</a></li>
             <li><a href="/src/View/view-about.php">A propos</a></li>
             <li><a href="/src/View/view-contact.php">Contact</a></li>
         </ul>
@@ -77,7 +78,7 @@
                     </div> -->
                     <a href="/src/View/view-services.php">Services</a>
                 </li>
-                <li class="p-2"><a href="/src/View/view-gallery.php">Galerie</a></li>
+                <li class="p-2"><a href="/src/View/view-gallery.php">Portfolio</a></li>
                 <li class="p-2"><a a href="/src/View/view-about.php">A propos</a></li>
                 <li class="p-2"><a href="/src/View/view-contact.php">Contact</a></li>
             </ul>
