@@ -1,9 +1,9 @@
 <nav class="w-screen lg:w-[20%] items-end lg:flex-shrink-0">
     <!-- Format mobile -->
     <div class="drawer drawer-end lg:hidden flex justify-between p-4">
-        <a href="/src/View/view-dashboard.php"><img src="../../img/logosansm.png" class=" w-24 m-1"></a>
+        <a href="/src/View/view-dashboard.php"><img src="../../img/logosansm.png" class="w-24 m-1"></a>
         <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-        <div class="flex-none lg:hidden self-end">
+        <div class="flex-none lg:hidden fixed right-5 z-10">
             <label for="my-drawer-4" aria-label="open sidebar" class="btn btn-square btn-ghost">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,12 @@
         <div class="drawer-side">
             <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
             <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-
+                <a href="/src/View/view-dashboard.php" class="px-4 py-2 flex items-center gap-4 font-semibold cursor-pointer hover:bg-neutral-800 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
+                        <path d="m21.743 12.331-9-10c-.379-.422-1.107-.422-1.486 0l-9 10a.998.998 0 0 0-.17 1.076c.16.361.518.593.913.593h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a.998.998 0 0 0 .743-1.669z"></path>
+                    </svg>
+                    Accueil
+                </a>
                 <a href="/src/View/view-dashboard-contact.php" class="px-4 py-2 flex items-center gap-4 font-semibold cursor-pointer hover:bg-neutral-800 rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
                         <path d="M4 18h2v4.081L11.101 18H16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2H4c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2z"></path>
@@ -52,10 +57,15 @@
     </div>
 
     <!-- Format desktop -->
-    <aside class="bg-neutral-900/50 hidden lg:flex flex-col h-full p-4 items-center py-12 justify-start">
+    <aside class="bg-neutral-900/50 hidden lg:flex flex-col h-full p-4 items-center py-12 justify-start fixed w-[20%]">
         <div class="flex flex-col gap-2">
             <a href="/src/View/view-dashboard.php" class="self-center mb-16"><img src="../../img/logosansm.png" alt="" class="w-32"></a>
-
+            <a href="/src/View/view-dashboard.php" class="px-4 py-2 flex items-center gap-4 font-semibold cursor-pointer hover:bg-neutral-800 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
+                    <path d="m21.743 12.331-9-10c-.379-.422-1.107-.422-1.486 0l-9 10a.998.998 0 0 0-.17 1.076c.16.361.518.593.913.593h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a.998.998 0 0 0 .743-1.669z"></path>
+                </svg>
+                Accueil
+            </a>
             <a href="/src/View/view-dashboard-contact.php" class="px-4 py-2 flex items-center gap-4 font-semibold cursor-pointer hover:bg-neutral-800 rounded-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
                     <path d="M4 18h2v4.081L11.101 18H16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2H4c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2z"></path>
@@ -76,7 +86,7 @@
                 F.A.Q.
             </a>
         </div>
-        <div class="flex flex-col mt-80 gap-4 justify-center items-center">
+        <div class="flex flex-col mt-60 gap-4 justify-center items-center">
             <a href="" class="btn">Déconnexion</a>
             <a href="/index.php" class="text-neutral-400 underline">Accès au site</a>
         </div>

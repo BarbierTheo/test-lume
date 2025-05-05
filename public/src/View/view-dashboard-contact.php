@@ -79,7 +79,7 @@
                         <form action="" class="flex lg:w-[50%] gap-2 flex-col lg:flex-row">
                             <select class="select select-ghost w-full">
                                 <option disabled selected>Changer le statut du message</option>
-                                <option>Lu</option>
+                                <option>Traité</option>
                                 <option>En attente</option>
                                 <option>Non-lu</option>
                             </select>
@@ -123,7 +123,7 @@
                         <form action="" class="flex lg:w-[50%] gap-2 flex-col lg:flex-row">
                             <select class="select select-ghost w-full">
                                 <option disabled selected>Changer le statut du message</option>
-                                <option>Lu</option>
+                                <option>Traité</option>
                                 <option>En attente</option>
                                 <option>Non-lu</option>
                             </select>
@@ -166,7 +166,7 @@
                         <form action="" class="flex lg:w-[50%] gap-2 flex-col lg:flex-row">
                             <select class="select select-ghost w-full">
                                 <option disabled selected>Changer le statut du message</option>
-                                <option>Lu</option>
+                                <option>Traité</option>
                                 <option>En attente</option>
                                 <option>Non-lu</option>
                             </select>
