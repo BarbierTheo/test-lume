@@ -3,9 +3,7 @@ services:
     image: php:8.2-apache
     container_name: php-apachelume
     volumes:
-      - ./public:/var/www/html
-      - ./templates:/var/www/templates
-      - ./src:/var/www/src
+      - ./src:/var/www/html
     ports:
       - "8000:80"
     depends_on:
@@ -14,7 +12,7 @@ services:
       - MYSQL_HOST=db
       - MYSQL_USER=root
       - MYSQL_PASSWORD=root
-      - MYSQL_DATABASE=app_db
+      - MYSQL_DATABASE=lume_db
     networks:
       - app-network
     build:
@@ -28,7 +26,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: app_db
+      MYSQL_DATABASE: lume_db
     volumes:
       - db_data:/var/lib/mysql
     networks:
