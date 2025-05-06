@@ -1,3 +1,9 @@
+<?php
+session_start();
 
+if (!isset($_SESSION['admin_id'])) {
+    header('Location: /login');
+    exit;
+}
 
-<?php require_once "../View/view-dashboard-portfolio-modify.php" ?>
+require_once "../View/view-dashboard-portfolio-modify.php" ?>
