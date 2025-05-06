@@ -9,7 +9,7 @@
         <!-- En-tête -->
         <div class="flex justify-between">
             <span class="text-xl font-semibold">Nouveau projet</span>
-            <a href="/src/View/view-dashboard-portfolio.php" class="btn">Annuler</a>
+            <a href="/admin/portfolio" class="btn">Annuler</a>
         </div>
         <!-- TXT du projet -->
         <div class="bg-neutral-900 rounded-lg shadow-md w-full p-4 flex flex-col gap-2">

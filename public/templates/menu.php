@@ -42,21 +42,10 @@
     <div class="hidden lg:flex">
         <ul class="menu menu-horizontal px-1 mr-4 flex xl:gap-6 text-lg uppercase font-semibold">
             <li><a href="/index.php">Accueil</a></li>
-            <li>
-                <!-- <div class="dropdown dropdown-center">
-                    <label tabindex="0" class="">Services</label>
-                    <ul tabindex="0" class="menu dropdown-content p-2 w-60 bg-stone-800/50">
-                        <li><a>Architecture</a></li>
-                        <li><a>Conseils & Accompagnements</a></li>
-                        <li><a>Rendus & Visuels 3D</a></li>
-                    </ul>
-                </div> -->
-                <a href="/src/View/view-services.php">Services</a>
-            </li>
-            </li>
-            <li><a href="/src/View/view-gallery.php">Portfolio</a></li>
-            <li><a href="/src/View/view-about.php">A propos</a></li>
-            <li><a href="/src/View/view-contact.php">Contact</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/about">A propos</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
     </div>
 
@@ -69,18 +58,10 @@
             </label>
             <ul tabindex="0" class="menu dropdown-content p-2 w-80 bg-zinc-950/90">
                 <li class="p-2"><a href="/index.php">Accueil</a></li>
-                <li class="p-2">
-                    <!-- <button class="button" id="servicesMenu">Services</button>
-                    <div class="flex-col gap-4 items-start px-4 hidden" id="showServices">
-                        <a href="">Architecture</a>
-                        <a href="">Conseils & Accompagnements</a>
-                        <a href="">Rendus & Visuels 3D</a>
-                    </div> -->
-                    <a href="/src/View/view-services.php">Services</a>
-                </li>
-                <li class="p-2"><a href="/src/View/view-gallery.php">Portfolio</a></li>
-                <li class="p-2"><a a href="/src/View/view-about.php">A propos</a></li>
-                <li class="p-2"><a href="/src/View/view-contact.php">Contact</a></li>
+                <li class="p-2"><a href="/services">Services</a></li>
+                <li class="p-2"><a href="/portfolio">Portfolio</a></li>
+                <li class="p-2"><a href="/about">A propos</a></li>
+                <li class="p-2"><a href="/contact">Contact</a></li>
             </ul>
         </div>
     </div>

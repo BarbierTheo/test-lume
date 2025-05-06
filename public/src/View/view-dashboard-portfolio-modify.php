@@ -11,7 +11,7 @@
             <span class="text-xl font-semibold">Modifier un projet</span>
             <div class="flex flex-col justify-end lg:flex-row">
                 <button class="btn !bg-red-600/30">Supprimer</button>
-                <a href="/src/View/view-dashboard-portfolio.php" class="btn">Annuler</a>
+                <a href="/admin/portfolio" class="btn">Annuler</a>
             </div>
         </div>
 

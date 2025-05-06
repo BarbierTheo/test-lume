@@ -9,7 +9,7 @@
         <!-- En-tête -->
         <div class="flex justify-between">
             <span class="text-xl font-semibold">Nouvel article</span>
-            <a href="/src/View/view-dashboard-faq.php" class="btn">Annuler</a>
+            <a href="/admin/faq" class="btn">Annuler</a>
         </div>
         <!-- Form add faq -->
         <div class="bg-neutral-900 rounded-lg shadow-md w-full p-4 flex flex-col gap-2">
