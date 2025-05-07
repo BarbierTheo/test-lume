@@ -1,3 +1,8 @@
+<?php 
 
 
-<?php require_once "../View/view-home.php" ?>
+
+
+
+
+require_once "../View/view-home.php";

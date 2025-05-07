@@ -9,7 +9,7 @@ class Admin
      *
      * @return connected|boolean Vrai si correct, faux si incorrent
      */
-    public static function getConnect($pseudo, $password)
+    public static function getConnect(string $pseudo, string $password)
     {
         $pdo = Database::getConnection();
         $sql = "SELECT * FROM lume_admin WHERE admin_pseudo = :pseudo;";
