@@ -37,36 +37,36 @@
         <div class="flex flex-col lg:flex-row gap-4">
             <div class="flex flex-col lg:w-[50%] gap-6 text-left lg:text-right">
 
-                <form action="" class="w-full">
+                <form method="post" action="" class="w-full flex flex-col gap-6" novalidate>
                     <fieldset class="fieldset w-full gap-2">
-
-                        <label class="label">Sujet</label>
-                        <select class="select w-full">
-                            <option disabled selected>La raison du contact</option>
-                            <option>Devis</option>
-                            <option>Projets</option>
-                            <option>Renseignements</option>
-                            <option>Autres</option>
-                        </select>
-
+                        
                         <label class="label">Nom</label>
-                        <input type="text" class="input w-full" placeholder="Dupont" />
-
+                        <input name="surname" type="text" class="input w-full" placeholder="Dupont" value="<?= $_POST['surname'] ?? "" ?>" />
+                        <span class="opacity-80 text-left ml-4"><?= $errors['surname'] ?? "" ?></span>
+                        
                         <label class="label">Prénom</label>
-                        <input type="text" class="input w-full" placeholder="Alexis" />
-
+                        <input name="firstName" type="text" class="input w-full" placeholder="Alexis" value="<?= $_POST['firstName'] ?? "" ?>" />
+                        <span class="opacity-80 text-left ml-4"><?= $errors['firstName'] ?? "" ?></span>
+                        
                         <label class="label">E-mail</label>
-                        <input type="email" class="input w-full" placeholder="dpt.alex@gmail.com" />
-
+                        <input name="email" type="email" class="input w-full" placeholder="dpt.alex@gmail.com" value="<?= $_POST['email'] ?? "" ?>" />
+                        <span class="opacity-80 text-left ml-4"><?= $errors['email'] ?? "" ?></span>
+                        
                         <label class="label">Téléphone</label>
-                        <input type="tel" class="input w-full" placeholder="050608070" />
+                        <input name="tel" type="tel" class="input w-full" placeholder="050608070" value="<?= $_POST['tel'] ?? "" ?>" />
+                        <span class="opacity-80 text-left ml-4"><?= $errors['tel'] ?? "" ?></span>
+                        
+                        <label class="label">Objet</label>
+                        <input name="subject" type="text" class="input w-full" placeholder="Renseignements" value="<?= $_POST['subject'] ?? "" ?>" />
+                        <span class="opacity-80 text-left ml-4"><?= $errors['subject'] ?? "" ?></span>
 
                         <label class="label">Message</label>
-                        <textarea class="textarea w-full max-h-[18rem]" placeholder="La limite est de 250 caractères"></textarea>
+                        <textarea name="message" class="textarea w-full max-h-[18rem]" placeholder="La limite est de 250 caractères"><?= $_POST['message'] ?? "" ?></textarea>
+                        <span class="opacity-80 text-left ml-4"><?= $errors['message'] ?? "" ?></span>
                         
                     </fieldset>
+                    <button class="btn-principal self-end" type="submit">Envoyer</button>
                 </form>
-                <button class="mt-16 btn-principal self-end">Envoyer</button>
             </div>
 
             <img src="/img/index/Minimalist_Villa.avif" alt="" class="lg:w-[50%] max-h-[40rem] object-cover object-bottom">

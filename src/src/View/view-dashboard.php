@@ -35,7 +35,7 @@
                 <div class="flex gap-4 w-full">
                     <div class="flex flex-col gap-2 bg-neutral-900 p-6 rounded-lg w-full shadow-md">
                         <div class="flex items-center font-bold text-xl justify-between">
-                            <span>26</span>
+                            <span><?= $resultMessage ?></span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
                                 <path d="m8.5 18 3.5 4 3.5-4H19c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h3.5zM7 7h10v2H7V7zm0 4h7v2H7v-2z"></path>
                             </svg>
@@ -65,7 +65,7 @@
                                 <path d="M3 4v12c0 1.103.897 2 2 2h3.5l3.5 4 3.5-4H19c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2zm8 1h2v6h-2V5zm0 8h2v2h-2v-2z"></path>
                             </svg>
                         </div>
-                        <div class="font-semibold text-md">2 messages non lus</div>
+                        <div class="font-semibold text-md"><?= $unread ?> messages non lus</div>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
                                 <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
@@ -78,7 +78,7 @@
                                 <path d="M20 2H4c-1.103 0-2 .894-2 1.992v12.016C2 17.106 2.897 18 4 18h3v4l6.351-4H20c1.103 0 2-.894 2-1.992V3.992A1.998 1.998 0 0 0 20 2z"></path>
                             </svg>
                         </div>
-                        <div class="font-semibold text-md">1 messages en attente</div>
+                        <div class="font-semibold text-md"><?= $pending ?> messages en attente</div>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
                                 <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
@@ -91,7 +91,7 @@
                                 <path d="M3 4v12c0 1.103.897 2 2 2h3.5l3.5 4 3.5-4H19c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2zm5.707 4.293L11 10.586l4.793-4.793 1.414 1.414L11 13.414 7.293 9.707l1.414-1.414z"></path>
                             </svg>
                         </div>
-                        <div class="font-semibold text-md">23 messages traités</div>
+                        <div class="font-semibold text-md"><?= $read ?> messages traités</div>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
                                 <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
@@ -118,62 +118,46 @@
         </div>
 
         <!-- Derniers messages -->
-        <div class="h-full w-full bg-neutral-900 rounded-lg shadow-md">
+        <div class="h-full lg:max-h-[50vh] w-full bg-neutral-900 rounded-lg shadow-md overflow-y-scroll">
 
             <ul class="list h-full">
                 <li class="p-4 pb-2 opacity-60 tracking-wide">Derniers messages reçus</li>
 
-                <li class="list-row">
-                    <div class="text-4xl font-thin opacity-30 tabular-nums">26</div>
-                    <div class="list-col-grow">
-                        <div>Thierry Henry</div>
-                        <div class="text-xs uppercase font-semibold opacity-60">Devis maison dans le 27</div>
-                    </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(255, 165, 0);">
-                            <path d="M20 2H4c-1.103 0-2 .894-2 1.992v12.016C2 17.106 2.897 18 4 18h3v4l6.351-4H20c1.103 0 2-.894 2-1.992V3.992A1.998 1.998 0 0 0 20 2z"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
-                            <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
-                        </svg>
-                    </div>
-                </li>
-                <li class="list-row">
-                    <div class="text-4xl font-thin opacity-30 tabular-nums">25</div>
-                    <div class="list-col-grow">
-                        <div>Dennis Bergkamp</div>
-                        <div class="text-xs uppercase font-semibold opacity-60">Demande de stage</div>
-                    </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(60, 179, 113);">
-                            <path d="M3 4v12c0 1.103.897 2 2 2h3.5l3.5 4 3.5-4H19c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2zm5.707 4.293L11 10.586l4.793-4.793 1.414 1.414L11 13.414 7.293 9.707l1.414-1.414z"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
-                            <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
-                        </svg>
-                    </div>
-                </li>
-                <li class="list-row">
-                    <div class="text-4xl font-thin opacity-30 tabular-nums">24</div>
-                    <div class="list-col-grow">
-                        <div>Robert Pirès</div>
-                        <div class="text-xs uppercase font-semibold opacity-60">Concept 3D Cuisine</div>
-                    </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(255, 0, 0);">
-                            <path d="M3 4v12c0 1.103.897 2 2 2h3.5l3.5 4 3.5-4H19c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2zm8 1h2v6h-2V5zm0 8h2v2h-2v-2z"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
-                            <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
-                        </svg>
-                    </div>
-                </li>
+                <?php foreach ($lastMessage as $value) { ?>
+
+                    <li class="list-row">
+                        <div class="text-4xl font-thin opacity-30 tabular-nums"><?= $value['contact_id'] ?></div>
+                        <div class="list-col-grow">
+                            <div><?= $value['contact_nom'] . " " . $value['contact_prenom'] ?></div>
+                            <div class="text-xs uppercase font-semibold opacity-60"><?= $value['contact_title'] ?></div>
+                        </div>
+                        <div>
+                            <?php switch ($value['contact_status']) {
+                                case "unread":
+                                    echo '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(255, 0, 0);">
+                                                <path d="M3 4v12c0 1.103.897 2 2 2h3.5l3.5 4 3.5-4H19c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2zm8 1h2v6h-2V5zm0 8h2v2h-2v-2z"></path>
+                                        </svg>';
+                                    break;
+                                case "pending":
+                                    echo '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(255, 165, 0);">
+                                            <path d="M20 2H4c-1.103 0-2 .894-2 1.992v12.016C2 17.106 2.897 18 4 18h3v4l6.351-4H20c1.103 0 2-.894 2-1.992V3.992A1.998 1.998 0 0 0 20 2z"></path>
+                                        </svg>';
+                                    break;
+                                case "read":
+                                    echo '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(60, 179, 113);">
+                                            <path d="M3 4v12c0 1.103.897 2 2 2h3.5l3.5 4 3.5-4H19c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2zm5.707 4.293L11 10.586l4.793-4.793 1.414 1.414L11 13.414 7.293 9.707l1.414-1.414z"></path>
+                                        </svg>';
+                                    break;
+                            } ?>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </div>
+                    </li>
+
+                <?php } ?>
 
             </ul>
 
