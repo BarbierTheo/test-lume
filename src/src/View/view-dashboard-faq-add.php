@@ -24,13 +24,13 @@
 
             <fieldset class="fieldset">
                 <legend class="fieldset-legend mb-1">Nom de l'article (question) <span class="font-light">(obligatoire)</span></legend>
-                <input type="text" class="input w-full" placeholder="Pourquoi les boîtes de pizzas sont-elles carré ?" name="title" />
+                <input type="text" class="input w-full" placeholder="Pourquoi les boîtes de pizzas sont-elles carré ?" name="title" value="<?= $_POST['title'] ?? "" ?>" />
                 <p class="text-xs font-light opacity-60"><?= $errors['title'] ?? "" ?></p>
             </fieldset>
 
             <fieldset class="fieldset">
                 <legend class="fieldset-legend mb-1">Contenu de l'article (réponse) <span class="font-light">(obligatoire)</span></legend>
-                <textarea class="textarea h-56 w-full max-h-96" placeholder="" name="article"></textarea>
+                <textarea class="textarea h-56 w-full max-h-96" placeholder="" name="article" id="#textarea"><?= $_POST['article'] ?? "" ?></textarea>
                 <div class="text-xs font-light opacity-60"><?= $errors['article'] ?? "" ?></div>
             </fieldset>
             <button class="mt-4 btn w-fit self-end" type="submit">Valider l'article</button>
@@ -40,5 +40,13 @@
 
 </main>
 
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        license_key: 'gpl',
+        skin: "oxide-dark",
+        content_css: "dark"
+    });
+</script>
 
 <?php include_once "../../templates/end.php" ?>

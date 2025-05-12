@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/tailwind.css">
     <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.min.css">
-
+    <script src="/vendor/tinymce/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
 
 </head>
 

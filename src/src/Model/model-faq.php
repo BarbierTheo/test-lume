@@ -37,6 +37,26 @@ class Faq
     }
 
     /**
+     * Récupère tous les articles selon le titre
+     *
+     * @return faq|array Tableau contenant tous les articles
+     */
+    public static function searchFaq($search)
+    {
+        $search = "%" . Safe::input($search) . "%";
+        $pdo = Database::getConnection();
+
+        $stmt = $pdo->prepare("SELECT `faq_id`,`faq_title`,`faq_article`, `faq_timestamp` FROM lume_faq
+        WHERE `faq_title` LIKE :search 
+        ORDER BY `faq_id` DESC");
+        $stmt->bindValue(':search', $search, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $faq = $stmt->fetchAll();
+        return $faq;
+    }
+
+    /**
      * Compte le nombres d'articles de la FAQ
      *
      * @return result|int Nombres d'articles sur le site
@@ -63,7 +83,7 @@ class Faq
         $stmt = $pdo->prepare($sql);
 
         $stmt->bindValue(':title', Safe::input($title), PDO::PARAM_STR);
-        $stmt->bindValue(':article', Safe::input($article), PDO::PARAM_STR);
+        $stmt->bindValue(':article', $article, PDO::PARAM_STR);
 
         return $stmt->execute();
     }
@@ -81,7 +101,7 @@ class Faq
         $stmt = $pdo->prepare($sql);
 
         $stmt->bindValue(':title', Safe::input($title), PDO::PARAM_STR);
-        $stmt->bindValue(':article', Safe::input($article), PDO::PARAM_STR);
+        $stmt->bindValue(':article', $article, PDO::PARAM_STR);
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 
         return $stmt->execute();

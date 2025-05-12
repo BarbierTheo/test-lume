@@ -55,7 +55,7 @@
 
             <fieldset class="fieldset">
                 <legend class="fieldset-legend mb-1">Contenu de l'article (réponse) <span class="font-light">(obligatoire)</span></legend>
-                <textarea class="textarea h-56 w-full max-h-96" name="article"><?= $actualFaq['faq_article'] ?></textarea>
+                <textarea class="textarea h-56 w-full max-h-96" name="article" id="textarea"><?= $actualFaq['faq_article'] ?></textarea>
                 <div class="text-xs font-light opacity-60"><?= $errors['article'] ?? "" ?></div>
             </fieldset>
 
@@ -65,5 +65,13 @@
 
 </main>
 
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        license_key: 'gpl',
+        skin: "oxide-dark",
+        content_css: "dark"
+    });
+</script>
 
 <?php include_once "../../templates/end.php" ?>

@@ -1,23 +1,30 @@
-const statusSelector = document.querySelectorAll('button[data-status]')
+const statusSelector = document.querySelectorAll("button[data-status]");
 
 document.addEventListener("click", function (element) {
-
-    console.log(element.target)
+    console.log(element.target);
     if (element.target.dataset.status) {
-
         let status = element.target.dataset.status;
 
-        fetch('/ajax/get-messages.php?status=' + status)
+        fetch("/ajax/get-messages.php?status=" + status)
             .then((response) => response.text())
             .then((data) => {
-                document.getElementById('messages').innerHTML = data;
-            })
+                document.getElementById("messages").innerHTML = data;
+            });
 
-        statusSelector.forEach(button => {
-            button.classList.remove('bg-neutral-200', 'text-neutral-800')
-        })
+        statusSelector.forEach((button) => {
+            button.classList.remove("bg-neutral-200", "text-neutral-800");
+        });
 
-        element.target.classList.add('bg-neutral-200', 'text-neutral-800')
-
+        element.target.classList.add("bg-neutral-200", "text-neutral-800");
     }
-})
+});
+
+const param = new URLSearchParams(window.location.search);
+const messageID = param.get("message");
+
+if (messageID) {
+    const radioInput = document.getElementById(`radioinput-${messageID}`);
+    if (radioInput) {
+        radioInput.checked = true;
+    }
+}

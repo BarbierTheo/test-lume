@@ -59,8 +59,8 @@
             <?php foreach ($messages as $value) { ?>
 
                 <div class="collapse collapse-arrow join-item border-neutral-600/40 border">
-                    <input type="radio" name="my-accordion" />
-                    <div class="collapse-title flex gap-4 items-center justify-between">
+                    <input type="radio" name="my-accordion" id="radioinput-<?= $value['contact_id'] ?>" />
+                    <div class="collapse-title flex gap-4 items-center justify-between" id="message-<?= $value['contact_id'] ?>">
                         <div class="flex items-center gap-4">
                             <span class="text-2xl font-light"><?= $value['contact_id'] ?></span>
                             <div class="flex flex-col text-sm">

@@ -32,15 +32,15 @@
         </div>
 
         <!-- Barre rechercher -->
-        <div class="flex gap-2 lg:gap-4">
-            <input type="text" placeholder="Par nom d'article" class="input grow" />
+        <form method="get" class="flex gap-2 lg:gap-4">
+            <input type="text" placeholder="Par nom d'article" class="input grow" name="search" />
             <button class="btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
                     <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
                 </svg>
                 <span class="hidden lg:block">Rechercher</span>
             </button>
-        </div>
+        </form>
 
         <!-- Questions de la FAQ -->
         <div class="join join-vertical bg-neutral-900 rounded-lg shadow-md min-h-[65vh]">
@@ -56,7 +56,9 @@
                         </div>
                     </div>
                     <div class="collapse-content text-sm flex flex-col">
-                        <span><?= $value['faq_article'] ?></span>
+                        <div>
+                            <?= $value['faq_article'] ?>
+                        </div>
                         <a href="/admin/faq/modify?faq=<?= $value['faq_id'] ?>" class="btn w-fit self-end mt-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)">
                                 <path d="m2.344 15.271 2 3.46a1 1 0 0 0 1.366.365l1.396-.806c.58.457 1.221.832 1.895 1.112V21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.598a8.094 8.094 0 0 0 1.895-1.112l1.396.806c.477.275 1.091.11 1.366-.365l2-3.46a1.004 1.004 0 0 0-.365-1.366l-1.372-.793a7.683 7.683 0 0 0-.002-2.224l1.372-.793c.476-.275.641-.89.365-1.366l-2-3.46a1 1 0 0 0-1.366-.365l-1.396.806A8.034 8.034 0 0 0 15 4.598V3a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v1.598A8.094 8.094 0 0 0 7.105 5.71L5.71 4.904a.999.999 0 0 0-1.366.365l-2 3.46a1.004 1.004 0 0 0 .365 1.366l1.372.793a7.683 7.683 0 0 0 0 2.224l-1.372.793c-.476.275-.641.89-.365 1.366zM12 8c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4z"></path>
