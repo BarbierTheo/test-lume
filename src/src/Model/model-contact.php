@@ -18,6 +18,46 @@ class Contact
     }
 
     /**
+     * Récupère tous les messages par statut
+     *
+     * @return messages|array Tableau contenant tous les messages
+     */
+    public static function getMessagesByStatus($status)
+    {
+        $pdo = Database::getConnection();
+
+        $stmt = $pdo->prepare("SELECT `contact_id`,`contact_nom`,`contact_prenom` ,`contact_email`, `contact_telephone`, `contact_title`, `contact_message`, `contact_status` FROM lume_contact WHERE `contact_status` = :status ORDER BY `contact_id` DESC");
+        $stmt->bindValue(':status', Safe::input($status), PDO::PARAM_STR);
+        $stmt->execute();
+
+        $messages = $stmt->fetchAll();
+        return $messages;
+    }
+
+    /**
+     * Récupère tous les messages par mot de recherche
+     *
+     * @return messages|array Tableau contenant tous les messages
+     */
+    public static function searchMessage($search)
+    {
+        $search = "%" . Safe::input($search) . "%";
+        $pdo = Database::getConnection();
+
+        $stmt = $pdo->prepare("SELECT `contact_id`,`contact_nom`,`contact_prenom` ,`contact_email`, `contact_telephone`, `contact_title`, `contact_message`, `contact_status` 
+        FROM lume_contact WHERE `contact_nom` LIKE :search 
+        OR `contact_email` LIKE :search
+        OR `contact_title` LIKE :search
+        ORDER BY `contact_id` DESC");
+        $stmt->bindValue(':search', $search, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $messages = $stmt->fetchAll();
+        return $messages;
+    }
+
+
+    /**
      * Récupère un message par son ID
      *
      * @return message|array Tableau contenant toutes les data du message

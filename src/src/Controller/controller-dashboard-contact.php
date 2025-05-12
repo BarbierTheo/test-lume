@@ -10,7 +10,11 @@ require_once "../Helpers/helper.php";
 require_once "../Model/model-database.php";
 require_once "../Model/model-contact.php";
 
-$messages = Contact::getAllMessages();
+if (!empty($_GET['search'])) {
+    $messages = Contact::searchMessage($_GET['search']);
+} else {
+    $messages = Contact::getAllMessages();
+}
 
 // var_dump($messages);
 

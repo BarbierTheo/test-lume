@@ -8,34 +8,34 @@
     <section class="min-w-[80%] min-h-screen p-4 lg:p-16 flex flex-col gap-4">
 
         <!-- Barre rechercher -->
-        <div class="flex gap-2 lg:gap-4">
-            <input type="text" placeholder="Par nom, objet, ou adresse mail" class="input grow" />
+        <form class="flex gap-2 lg:gap-4" method="get">
+            <input type="text" placeholder="Par nom, objet, ou adresse mail" class="input grow" name="search" />
             <button class="btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
                     <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
                 </svg>
                 <span class="hidden lg:block">Rechercher</span>
             </button>
-        </div>
+        </form>
 
         <!-- Filtres -->
         <div class="flex flex-col lg:flex-row min-h-[5%] gap-4">
-            <button class="flex gap-2 w-full items-center justify-center bg-neutral-200 hover:bg-neutral-300 text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer py-3 lg:py-2">
+            <button class="flex gap-2 w-full items-center justify-center  hover:bg-neutral-300 text-neutral-800 bg-neutral-200 m-4 rounded-lg font-semibold cursor-pointer py-3 lg:py-2" data-status="all">
                 Tous les messages
             </button>
-            <button class="flex gap-2 w-full items-center justify-center hover:bg-neutral-300 hover:text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer py-3 lg:py-2">
+            <button class="flex gap-2 w-full items-center justify-center hover:bg-neutral-300 hover:text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer py-3 lg:py-2" data-status="unread">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(255, 0, 0);">
                     <path d="M3 4v12c0 1.103.897 2 2 2h3.5l3.5 4 3.5-4H19c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2zm8 1h2v6h-2V5zm0 8h2v2h-2v-2z"></path>
                 </svg>
                 <?= $unread ?> messages non-lus
             </button>
-            <button class="flex gap-2 w-full items-center justify-center hover:bg-neutral-300 hover:text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer py-3 lg:py-2">
+            <button class="flex gap-2 w-full items-center justify-center hover:bg-neutral-300 hover:text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer py-3 lg:py-2" data-status="pending">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(255, 165, 0);">
                     <path d="M20 2H4c-1.103 0-2 .894-2 1.992v12.016C2 17.106 2.897 18 4 18h3v4l6.351-4H20c1.103 0 2-.894 2-1.992V3.992A1.998 1.998 0 0 0 20 2z"></path>
                 </svg>
                 <?= $pending ?> message en attente
             </button>
-            <button class="flex gap-2 w-full items-center justify-center hover:bg-neutral-300 hover:text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer py-3 lg:py-2">
+            <button class="flex gap-2 w-full items-center justify-center hover:bg-neutral-300 hover:text-neutral-800 m-4 rounded-lg font-semibold cursor-pointer py-3 lg:py-2" data-status="read">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(60, 179, 113);">
                     <path d="M3 4v12c0 1.103.897 2 2 2h3.5l3.5 4 3.5-4H19c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2zm5.707 4.293L11 10.586l4.793-4.793 1.414 1.414L11 13.414 7.293 9.707l1.414-1.414z"></path>
                 </svg>
@@ -54,7 +54,7 @@
         </svg> -->
 
         <!-- Messages -->
-        <div class="join join-vertical bg-neutral-900 rounded-lg shadow-md min-h-[70vh]">
+        <div class="join join-vertical bg-neutral-900 rounded-lg shadow-md min-h-[70vh]" id="messages">
 
             <?php foreach ($messages as $value) { ?>
 
@@ -141,4 +141,5 @@
 
 </main>
 
+<script src="/js/admin-contact.js"></script>
 <?php include_once "../../templates/end.php" ?>
