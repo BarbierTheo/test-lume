@@ -45,77 +45,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $errors['surface'] = "La surface doit être écrit en nombres";
     }
 
-    // if (empty($_FILES['image1']['name'])) {
-    //     $errors['image1'] = "Veuillez ajouter une image (3 images obligatoire)";
-    // } else if ($_FILES['image1']['type'] != "image/png" && $_FILES['image1']['type'] != "image/jpeg") {
-    //     $errors['image1'] = "Veuillez ajouter au format JPG ou PNG";
-    // } else if ($_FILES['image1']['error'] !== 0) {
-    //     $errors['image1'] = "Erreur d'upload";
-    // }
 
-    // if (empty($_FILES['image2']['name'])) {
-    //     $errors['image2'] = "Veuillez ajouter une image (3 images obligatoire)";
-    // } else if ($_FILES['image2']['type'] != "image/png" && $_FILES['image2']['type'] != "image/jpeg") {
-    //     $errors['image2'] = "Veuillez ajouter au format JPG ou PNG";
-    // } else if ($_FILES['image2']['error'] !== 0) {
-    //     $errors['image2'] = "Erreur d'upload";
-    // }
+    for ($i = 1; $i <= 9; $i++) {
+        if (isset($_FILES["image$i"])) {
 
-    // if (empty($_FILES['image3']['name'])) {
-    //     $errors['image3'] = "Veuillez ajouter une image (3 images obligatoire)";
-    // } else if ($_FILES['image3']['type'] != "image/png" && $_FILES['image3']['type'] != "image/jpeg") {
-    //     $errors['image3'] = "Veuillez ajouter au format JPG ou PNG";
-    // } else if ($_FILES['image3']['error'] !== 0) {
-    //     $errors['image3'] = "Erreur d'upload";
-    // }
+            if ($i <= 3) {
+                if (empty($_FILES["image$i"]['name'])) {
+                    $errors["image$i"] = "Veuillez ajouter une image (3 images obligatoire)";
+                }
+            }
 
-    // if (isset($_FILES['image4'])) {
-    //     if ($_FILES['image4']['type'] != "image/png" && $_FILES['image4']['type'] != "image/jpeg") {
-    //         $errors['image4'] = "Veuillez ajouter au format JPG ou PNG";
-    //     } else if ($_FILES['image4']['error'] !== 0) {
-    //     $errors['image4'] = "Erreur d'upload";
-    // }
-    // } 
+            if ($_FILES["image$i"]['type'] != "image/png" && $_FILES["image$i"]['type'] != "image/jpeg") {
+                $errors["image$i"] = "Veuillez ajouter au format JPG ou PNG";
+            } else if ($_FILES["image$i"]['error'] !== 0) {
+                $errors["image$i"] = "Erreur d'upload";
+            }
+        }
+    }
 
-    // if (isset($_FILES['image5'])) {
-    //     if ($_FILES['image5']['type'] != "image/png" && $_FILES['image5']['type'] != "image/jpeg") {
-    //         $errors['image5'] = "Veuillez ajouter au format JPG ou PNG";
-    //     } else if ($_FILES['image5']['error'] !== 0) {
-    //     $errors['image5'] = "Erreur d'upload";
-    // }
-    // } 
 
-    // if (isset($_FILES['image6'])) {
-    //     if ($_FILES['image6']['type'] != "image/png" && $_FILES['image6']['type'] != "image/jpeg") {
-    //         $errors['image6'] = "Veuillez ajouter au format JPG ou PNG";
-    //     } else if ($_FILES['image6']['error'] !== 0) {
-    //     $errors['image6'] = "Erreur d'upload";
-    // }
-    // } 
-
-    // if (isset($_FILES['image7'])) {
-    //     if ($_FILES['image7']['type'] != "image/png" && $_FILES['image7']['type'] != "image/jpeg") {
-    //         $errors['image7'] = "Veuillez ajouter au format JPG ou PNG";
-    //     } else if ($_FILES['image7']['error'] !== 0) {
-    //     $errors['image7'] = "Erreur d'upload";
-    // }
-    // }
-
-    // if (isset($_FILES['image8'])) {
-    //     if ($_FILES['image8']['type'] != "image/png" && $_FILES['image8']['type'] != "image/jpeg") {
-    //         $errors['image8'] = "Veuillez ajouter au format JPG ou PNG";
-    //     } else if ($_FILES['image8']['error'] !== 0) {
-    //     $errors['image8'] = "Erreur d'upload";
-    // }
-    // }
-
-    // if (isset($_FILES['image9'])) {
-    //     if ($_FILES['image9']['type'] != "image/png" && $_FILES['image9']['type'] != "image/jpeg") {
-    //         $errors['image9'] = "Veuillez ajouter au format JPG ou PNG";
-    //     } else if ($_FILES['image9']['error'] !== 0) {
-    //     $errors['image9'] = "Erreur d'upload";
-    // }
-    // }
 
 
     if (empty($errors)) {
@@ -130,32 +78,54 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             'surface' => Safe::input($_POST['surface'])
         ];
 
-        var_dump(Portfolio::addProject($safePost));
+        $LastIdProject = Portfolio::addProject($safePost);
 
+        $images = [];
+
+        $project_directory = "../../img/projects/$LastIdProject/";
+        mkdir($project_directory, 0700);
+
+        $i = 0;
+
+        foreach ($_FILES as $value) {
+            $i++;
+            if (!empty($value['name'])) {
+
+                $newName = uniqid() . "_" . basename($value['name']);
+                $target_file = $project_directory . $newName;
+
+                if (move_uploaded_file($_FILES["image$i"]["tmp_name"], $target_file)) {
+
+                    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+                    if ($imageFileType == "jpg") {
+                        $imageToConvert = imagecreatefromjpeg($target_file);
+                    } else if ($imageFileType == "png") {
+                        $imageToConvert = imagecreatefrompng($target_file);
+                    }
+
+                    $imageName = $project_directory . pathinfo($newName, PATHINFO_FILENAME) . ".webp";
+                    imagewebp($imageToConvert, $imageName, 70);
+                    array_push($images, $imageName);
+
+                    
+                } else {
+                    echo "Sorry, there was an error uploading your file.";
+                }
+            }
+        }
         
-        // $images = [];
-
-        // $project_directory = "/img/projects/$id";
-        // mkdir($project_directory);
-
-        // foreach ($_FILES as $value) {
-        //     if (!empty($value['name'])) {
-        //         array_push($images, $value);
-        //     }
-
-        // }
+        Portfolio::addImagesToProject($images, $LastIdProject);
 
 
-
-        // var_dump($safePost);
-        // header('Location: /admin/faq');
-        // exit;
+        // var_dump($images);
+        header('Location: /admin/portfolio');
+        exit;
     }
 }
 
 // var_dump($images);
-var_dump($_POST);
-var_dump($errors);
+// var_dump($_POST);
+// var_dump($errors);
 // var_dump($_FILES);
 
 require_once "../View/view-dashboard-portfolio-add.php";

@@ -9,11 +9,15 @@ if (!isset($_SESSION['admin_id'])) {
 require_once "../Model/model-database.php";
 require_once "../Model/model-faq.php";
 require_once "../Model/model-contact.php";
+require_once "../Model/model-portfolio.php";
 require_once "../Helpers/helper.php";
 
 $resultFAQ = Faq::countAllFaq();
 $resultMessage = Contact::countAllMessage();
 $lastMessage = Contact::getAllMessages();
+
+$countProjects = Portfolio::countAllProjects();
+$countImages = Portfolio::countAllImages();
 
 $statusMessage = Contact::countMessageByStatus();
 

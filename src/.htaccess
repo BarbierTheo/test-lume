@@ -3,6 +3,7 @@ RewriteEngine On
 RewriteRule ^home$ src/Controller/controller-home.php [L,QSA]
 RewriteRule ^services$ src/Controller/controller-services.php [L,QSA]
 RewriteRule ^portfolio$ src/Controller/controller-gallery.php [L,QSA]
+RewriteRule ^project$ src/Controller/controller-projets.php [L,QSA]
 RewriteRule ^about$ src/Controller/controller-about.php [L,QSA]
 RewriteRule ^contact$ src/Controller/controller-contact.php [L,QSA]
 

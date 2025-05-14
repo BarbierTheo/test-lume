@@ -17,13 +17,13 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)">
                             <path d="M20 5h-9.586L8.707 3.293A.997.997 0 0 0 8 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2z"></path>
                         </svg>
-                        <div class="font-light text-md">Nombre de projets : <span class="font-semibold">4</span></div>
+                        <div class="font-light text-md">Nombre de projets : <span class="font-semibold"><?= $countProjects ?></span></div>
                     </li>
                     <li class="list-row">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)">
                             <path d="M19.999 4h-16c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm-13.5 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5.5 10h-7l4-5 1.5 2 3-4 5.5 7h-7z"></path>
                         </svg>
-                        <div class="font-light text-md">Total d'images : <span class="font-semibold">43</span></div>
+                        <div class="font-light text-md">Total d'images : <span class="font-semibold"><?= $countImages ?></span></div>
                     </li>
                     <li class="list-row">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)">
@@ -58,49 +58,32 @@
         <div class="h-full w-full bg-neutral-900 rounded-lg shadow-md">
 
             <ul class="list h-full">
-                <li class="list-row flex justify-between">
-                    <div class="flex gap-8 items-center">
 
-                        <div class="w-16 lg:w-32 h-auto">
-                            <img src="/img/carousel/carousel1.avif" alt="" class="rounded">
+                <?php foreach ($projects as $value) { ?>
 
+                    <li class="list-row flex justify-between">
+                        <div class="flex gap-8 items-center">
+
+                            <div class="w-16 lg:w-32 h-auto">
+                                <img src="<?= $value['img_url'] ?>" alt="" class="rounded">
+
+                            </div>
+                            <div class="list-col-grow">
+                                <div class="font-semibold text-lg uppercase"><?= $value['project_name'] ?></div>
+                                <div class="opacity-60"><?= $value['project_date'] ?></div>
+                            </div>
                         </div>
-                        <div class="list-col-grow">
-                            <div class="font-semibold text-lg uppercase">SEBHA</div>
-                            <div class="opacity-60">04/05/2024</div>
+                        <div class="flex items-center gap-4">
+                            <a href="/src/View/view-dashboard-portfolio-modify.php" class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)">
+                                    <path d="m2.344 15.271 2 3.46a1 1 0 0 0 1.366.365l1.396-.806c.58.457 1.221.832 1.895 1.112V21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.598a8.094 8.094 0 0 0 1.895-1.112l1.396.806c.477.275 1.091.11 1.366-.365l2-3.46a1.004 1.004 0 0 0-.365-1.366l-1.372-.793a7.683 7.683 0 0 0-.002-2.224l1.372-.793c.476-.275.641-.89.365-1.366l-2-3.46a1 1 0 0 0-1.366-.365l-1.396.806A8.034 8.034 0 0 0 15 4.598V3a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v1.598A8.094 8.094 0 0 0 7.105 5.71L5.71 4.904a.999.999 0 0 0-1.366.365l-2 3.46a1.004 1.004 0 0 0 .365 1.366l1.372.793a7.683 7.683 0 0 0 0 2.224l-1.372.793c-.476.275-.641.89-.365 1.366zM12 8c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4z"></path>
+                                </svg>
+                                Modifier
+                            </a>
                         </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <a href="/src/View/view-dashboard-portfolio-modify.php" class="btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)">
-                                <path d="m2.344 15.271 2 3.46a1 1 0 0 0 1.366.365l1.396-.806c.58.457 1.221.832 1.895 1.112V21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.598a8.094 8.094 0 0 0 1.895-1.112l1.396.806c.477.275 1.091.11 1.366-.365l2-3.46a1.004 1.004 0 0 0-.365-1.366l-1.372-.793a7.683 7.683 0 0 0-.002-2.224l1.372-.793c.476-.275.641-.89.365-1.366l-2-3.46a1 1 0 0 0-1.366-.365l-1.396.806A8.034 8.034 0 0 0 15 4.598V3a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v1.598A8.094 8.094 0 0 0 7.105 5.71L5.71 4.904a.999.999 0 0 0-1.366.365l-2 3.46a1.004 1.004 0 0 0 .365 1.366l1.372.793a7.683 7.683 0 0 0 0 2.224l-1.372.793c-.476.275-.641.89-.365 1.366zM12 8c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4z"></path>
-                            </svg>
-                            Modifier
-                        </a>
-                    </div>
-                </li>
+                    </li>
 
-                <li class="list-row flex justify-between">
-                    <div class="flex gap-8 items-center">
-
-                        <div class="w-16 lg:w-32 h-auto">
-                            <img src="/img/carousel/carousel2.avif" alt="" class="rounded">
-
-                        </div>
-                        <div class="list-col-grow">
-                            <div class="font-semibold text-lg uppercase">DA-NANG</div>
-                            <div class="opacity-60">13/02/2024</div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <a href="/src/View/view-dashboard-portfolio-modify.php" class="btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)">
-                                <path d="m2.344 15.271 2 3.46a1 1 0 0 0 1.366.365l1.396-.806c.58.457 1.221.832 1.895 1.112V21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.598a8.094 8.094 0 0 0 1.895-1.112l1.396.806c.477.275 1.091.11 1.366-.365l2-3.46a1.004 1.004 0 0 0-.365-1.366l-1.372-.793a7.683 7.683 0 0 0-.002-2.224l1.372-.793c.476-.275.641-.89.365-1.366l-2-3.46a1 1 0 0 0-1.366-.365l-1.396.806A8.034 8.034 0 0 0 15 4.598V3a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v1.598A8.094 8.094 0 0 0 7.105 5.71L5.71 4.904a.999.999 0 0 0-1.366.365l-2 3.46a1.004 1.004 0 0 0 .365 1.366l1.372.793a7.683 7.683 0 0 0 0 2.224l-1.372.793c-.476.275-.641.89-.365 1.366zM12 8c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4z"></path>
-                            </svg>
-                            Modifier
-                        </a>
-                    </div>
-                </li>
+                <?php } ?>
 
             </ul>
 

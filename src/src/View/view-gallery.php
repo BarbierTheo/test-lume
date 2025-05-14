@@ -34,26 +34,20 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
-        <a href="/src/View/view-projects.php" class="relative w-full min-h-full">
-            <img src="../../img/Minimalist_Villa.png" alt="Façade de l'université" class="w-full h-[90%] object-cover object-center">
-            <div class="flex justify-between mt-2">
-                <span class="uppercase font-semibold">université du Havre</span>
-                <span class="opacity-60">2025</span>
-            </div>
-        </a>
-        <a href="/src/View/view-projects.php" class="relative w-full min-h-full">
-            <img src="../../img/Minimalist_Villa_2.png" alt="Façade de l'université" class="w-full h-[90%] object-cover object-center">
-            <div class="flex justify-between mt-2">
-                <span class="uppercase font-semibold">université du Havre</span>
-                <span class="opacity-60">2025</span>
-            </div>
-        </a> <a href="/src/View/view-projects.php" class="relative w-full min-h-full">
-            <img src="../../img/Minimalist_Villa_3.png" alt="Façade de l'université" class="w-full h-[90%] object-cover object-center">
-            <div class="flex justify-between mt-2">
-                <span class="uppercase font-semibold">université du Havre</span>
-                <span class="opacity-60">2025</span>
-            </div>
-        </a>
+        <?php foreach ($projects as $value) { ?>
+
+            <a href="/project?id=<?= $value['project_id'] ?>" class="block">
+                <div class="w-full aspect-[3/4] overflow-hidden">
+                    <img src="<?= $value['img_url'] ?>" alt="" class="w-full h-full object-cover object-center">
+                </div>
+                <div class="flex justify-between mt-2">
+                    <span class="uppercase font-semibold"><?= $value['project_name'] ?></span>
+                    <span class="opacity-60"><?= $value['project_date'] ?></span>
+                </div>
+            </a>
+
+        <?php } ?>
+
     </div>
 
 

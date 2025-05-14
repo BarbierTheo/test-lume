@@ -1,3 +1,24 @@
+<?php
+require_once "../Model/model-database.php";
+require_once "../Model/model-portfolio.php";
+
+if (isset($_GET['id']) && !empty($_GET['id'] && is_numeric($_GET['id']))) {
+    $project = Portfolio::getOneProject($_GET['id']);
+    if (empty($project)) {
+        header('location: /portfolio');
+        exit;
+    }
+    $images = Portfolio::getImgFromProject($_GET['id']);
 
 
-<?php require_once "../View/view-projects.php" ?>
+} else {
+    header('location: /portfolio');
+    exit;
+}
+
+// var_dump($project);
+
+
+
+
+require_once "../View/view-projects.php";
