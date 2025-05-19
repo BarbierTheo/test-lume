@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // let state = "";
   // let open = false;
 
-  // Ouverture menu hamburger
+  // // Ouverture menu hamburger
   // document.getElementById("openMenu").addEventListener("change", () => {
 
   //   const menuInterface = document.getElementById("menuInterface");
@@ -40,20 +40,18 @@ document.addEventListener("DOMContentLoaded", () => {
   //   } else {
 
   //     for (let i = 1; i <= 4; i++) {
+  //       document.querySelector(`.entryMenu${i}`).classList.remove("opacity-0")
   //       document
   //         .querySelector(`.entryMenu${i}`)
   //         .classList.add(
   //           "animate-fade-right",
   //           `animate-duration-[500ms]`,
   //           "animate-ease-in-out",
-  //           "opacity-0"
+  //           "animate-fill-forwards"
   //         );
   //       document.querySelector(
   //         `.entryMenu${i}`
   //       ).style.animationDelay = `${delay}ms`;
-  //       document.querySelector(
-  //         `.entryMenu${i}`
-  //       ).style.opacity = `0`;
   //       delay = delay + 100;
   //     }
 

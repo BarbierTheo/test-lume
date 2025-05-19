@@ -37,10 +37,10 @@
             <fieldset class="fieldset">
                 <legend class="fieldset-legend mb-1">Catégorie du projet <span class="font-light">(obligatoire)</span></legend>
                 <select class="select w-full" name="categorie">
-                    <option hidden selected value="">Choisissez la catégorie</option>
-                    <option value="5">Commercial</option>
-                    <option value="1">Résidentiel</option>
-                    <option value="6">Conceptuel</option>
+                    <option hidden <?= isset($_POST['categorie']) ? "" : "selected" ?> value="">Choisissez la catégorie</option>
+                    <option value="5" <?= isset($_POST['categorie']) && $_POST['categorie'] == "5" ? "selected" : "" ?>>Commercial</option>
+                    <option value="1" <?= isset($_POST['categorie']) && $_POST['categorie'] == "1" ? "selected" : "" ?>>Résidentiel</option>
+                    <option value="6" <?= isset($_POST['categorie']) && $_POST['categorie'] == "6" ? "selected" : "" ?>>Conceptuel</option>
                 </select>
                 <p class="text-xs font-light opacity-60"><?= $errors['categorie'] ?? "" ?></p>
             </fieldset>
@@ -66,7 +66,7 @@
                 <li>Nombre d’images : minimum 3 et maximum 9</li>
             </ul>
 
-            <div class="flex flex-col gap-2" id="divimg">
+            <div class="flex flex-col gap-2" id="divimg" data-images="3">
                 <div class="pl-2 flex flex-col gap-1">
                     <span class="font-semibold text-sm">Image 1 <span class="font-light">(obligatoire)</span></span>
                     <input type="file" class="file-input w-full" name="image1" />

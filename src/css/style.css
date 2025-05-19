@@ -2,7 +2,6 @@
 @import "tailwindcss-animated";
 @plugin "daisyui";
 
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
@@ -49,7 +48,7 @@
 /* https://www.youtube.com/watch?v=dAIVbLrAb_U */
 
 
-/* :root {
+:root {
   --bar-width: 50px;
   --bar-height: 4px;
   --hamburger-gap: 6px;
@@ -118,7 +117,7 @@
 .hamburger-menu input:checked {
   opacity: 0;
   width: 0;
-} */
+}
 
 .zoom-carousel {
   animation: zoomSlow 20s ease-in-out forwards;
@@ -128,6 +127,7 @@
   0% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(1.1);
   }

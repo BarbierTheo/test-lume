@@ -1,5 +1,7 @@
 let maximg = 9
-let images = 3
+
+let images = parseInt(divimg.dataset.images);
+console.log(images);
 
 document.getElementById('addimg').addEventListener('click', () => {
 
@@ -7,7 +9,7 @@ document.getElementById('addimg').addEventListener('click', () => {
         images++
         document.getElementById('divimg').innerHTML += `<div class="pl-2 flex flex-col gap-1">
                 <span class="font-semibold text-sm">Image ${images}<span class="font-light">(obligatoire)</span></span>
-                <input type="file" class="file-input w-full" name="image${images}"/>
+                <input type="file" class="file-input w-full" name="${images}"/>
             </div>`
     }
 

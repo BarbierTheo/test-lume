@@ -10,10 +10,10 @@
     <div class="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-8">
         <div class="flex flex-col" id="menuList">
             <ul class="text-gray-100 font-light text-2xl lg:text-4xl flex flex-col gap-5">
-                <li class="entryMenu1" style="opacity: 0;"><button class="hover:text-gray-400 cursor-pointer" id="toggleServices">Services</button></li>
-                <li class="entryMenu2" style="opacity: 0;"><button class="hover:text-gray-400 cursor-pointer" id="toggleProjects">Portfolio</button></li>
-                <li class="entryMenu3" style="opacity: 0;"><a href="" class="hover:text-gray-400 cursor-pointer">A propos</a></li>
-                <li class="entryMenu4" style="opacity: 0;"><a href="" class="hover:text-gray-400 cursor-pointer">Contact</a></li>
+                <li class="entryMenu1 opacity-0"><button class="hover:text-gray-400 cursor-pointer" id="toggleServices">Services</button></li>
+                <li class="entryMenu2 opacity-0"><button class="hover:text-gray-400 cursor-pointer" id="toggleProjects">Portfolio</button></li>
+                <li class="entryMenu3 opacity-0"><a href="" class="hover:text-gray-400 cursor-pointer">A propos</a></li>
+                <li class="entryMenu4 opacity-0"><a href="" class="hover:text-gray-400 cursor-pointer">Contact</a></li>
             </ul>
         </div>
         <div class="secondstate flex flex-col lg:flex-row gap-8">
@@ -25,7 +25,7 @@
             <a href="" class="self-end text-slate-500 hover:underline">Foire aux questions</a>
             <a href="" class="self-end text-slate-500 hover:underline">Mentions légales</a>
         </div>
-        <a href="" class="text-3xl lg:text-4xl text-gray-50 self-end"><i class="uil uil-instagram"></i></a>
+        <a href="" class="text-3xl lg:text-4xl text-gray-50 self-end"><i class="uil uil-instagram"></i>aaa</a>
     </div>
 </div>
 

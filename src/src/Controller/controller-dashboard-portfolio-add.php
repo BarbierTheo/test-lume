@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if (move_uploaded_file($_FILES["image$i"]["tmp_name"], $target_file)) {
 
                     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-                    if ($imageFileType == "jpg") {
+                    if ($imageFileType == "jpg" || $imageFileType == "jpeg") {
                         $imageToConvert = imagecreatefromjpeg($target_file);
                     } else if ($imageFileType == "png") {
                         $imageToConvert = imagecreatefrompng($target_file);
@@ -105,15 +105,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     $imageName = $project_directory . pathinfo($newName, PATHINFO_FILENAME) . ".webp";
                     imagewebp($imageToConvert, $imageName, 70);
-                    array_push($images, $imageName);
+                    if (file_exists($target_file)) {
+                        unlink($target_file);
+                    }
 
-                    
+                    array_push($images, $imageName);
                 } else {
                     echo "Sorry, there was an error uploading your file.";
                 }
             }
         }
-        
+
         Portfolio::addImagesToProject($images, $LastIdProject);
 
 
