@@ -79,10 +79,24 @@
                         <span class="font-semibold text-sm">Image <?= $key + 1 ?><span class="font-light pl-2">(obligatoire)</span></span>
                         <div class="flex flex-col lg:flex-row lg:justify-between gap-2">
                             <img src="<?= $value['img_url'] ?>" class="w-48 rounded self-center" alt="">
-                            <button class="btn !bg-red-600/30 self-center">Supprimer</button>
+                            <button class="btn !bg-red-600/30 self-center" onclick="delete_modal_image<?= $key ?>.showModal()" type="button">Supprimer</button>
                         </div>
                         <input type="file" class="file-input w-full" name="<?= $key + 1 ?>" />
                     </div>
+
+                    <dialog id="delete_modal_image<?= $key ?>" class="modal">
+                        <div class="modal-box">
+                            <h3 class="text-lg font-bold">Supprimer l'image ?</h3>
+                            <p class="py-4">Cette action est permanente</p>
+                            <div class="flex justify-between">
+                                <a href="" class="w-fit btn">Annuler</a>
+                                <div>
+                                    <a href="" class="w-fit btn !bg-red-600/30">Supprimer</a>
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
+
 
                 <?php } ?>
 

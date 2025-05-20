@@ -7,7 +7,6 @@ Site vitrine pour une agence d’architecture développé en PHP avec architectu
 
 ## Prérequis
 - Docker
-- Composer  
 - Node.js et npm (pour le build front-end)
 
 ---
@@ -23,9 +22,8 @@ git clone https://github.com/BarbierTheo/test-lume.git
 
 ## 2 - Installer les dépendances
 
-Installer Composer et NPM  
+Installer NPM  
 ```bash
-composer install
 npm install
 ```
 
@@ -34,7 +32,7 @@ npm install
 ## 3 - Lancer Docker Desktop, et lancer les conteneurs
 
 ```bash
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 ---
@@ -43,7 +41,7 @@ docker-compose up -d --build
 
 Se rendre sur <http://127.0.0.1:8081/>
 Se connecter avec root, root
-Se rendre dans Importer et importer lume_db.sql
+Se rendre dans Importer et importer safe.sql
 
 
 ---
