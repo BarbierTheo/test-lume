@@ -17,6 +17,7 @@ Site vitrine pour une agence d’architecture développé en PHP avec architectu
 Cloner le dépôt  
 ```bash
 git clone https://github.com/BarbierTheo/test-lume.git
+```
 
 ---
 
@@ -26,6 +27,7 @@ Installer Composer et NPM
 ```bash
 composer install
 npm install
+```
 
 ---
 
@@ -33,6 +35,7 @@ npm install
 
 ```bash
 docker-compose up -d --build
+```
 
 ---
 
