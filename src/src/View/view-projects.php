@@ -1,10 +1,11 @@
 <?php include_once "../../templates/head.php" ?>
 
 <?php include_once "../../loader.php" ?>
+<?php include_once "../../templates/chatbot.php" ?>
 <?php include_once "../../templates/menu.php" ?>
 
 <!-- IMG principale -->
-<section class="flex items-end w-screen h-screen">
+<section class="flex items-end w-screen h-screen" id="hero">
     <div class="absolute inset-0 overflow-hidden">
         <div class="w-screen h-screen bg-center bg-no-repeat bg-cover zoom-carousel" style="background-image: url('<?= $images[0]['img_url'] ?>')"></div>
     </div>

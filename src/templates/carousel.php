@@ -1,4 +1,4 @@
-<div class="swiper swiperHeader bg-zinc-950/90">
+<div class="swiper swiperHeader bg-zinc-950/90"  id="hero">
 
     <div class="swiper-wrapper">
 

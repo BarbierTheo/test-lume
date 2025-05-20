@@ -106,9 +106,9 @@
             <p class="py-4">Cette action est permanente</p>
             <div class="flex justify-between">
                 <a href="" class="w-fit btn">Annuler</a>
-                <form action="" method="POST">
-                    <button type="submit" class="w-fit btn !bg-red-600/30">Supprimer</button>
-                </form>
+                <div>
+                    <a href="/src/controller/controller-projectdelete.php?projet=<?= $_GET['projet'] ?>" class="w-fit btn !bg-red-600/30">Supprimer</a>
+                </div>
             </div>
         </div>
         <form method="dialog" class="modal-backdrop">

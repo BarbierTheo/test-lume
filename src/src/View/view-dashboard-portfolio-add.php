@@ -69,19 +69,19 @@
             <div class="flex flex-col gap-2" id="divimg" data-images="3">
                 <div class="pl-2 flex flex-col gap-1">
                     <span class="font-semibold text-sm">Image 1 <span class="font-light">(obligatoire)</span></span>
-                    <input type="file" class="file-input w-full" name="image1" />
+                    <input type="file" class="file-input w-full" name="1" />
                     <p class="text-xs font-light opacity-60"><?= $errors['image1'] ?? "" ?></p>
                 </div>
 
                 <div class="pl-2 flex flex-col gap-1">
                     <span class="font-semibold text-sm">Image 2 <span class="font-light">(obligatoire)</span></span>
-                    <input type="file" class="file-input w-full" name="image2" />
+                    <input type="file" class="file-input w-full" name="2" />
                     <p class="text-xs font-light opacity-60"><?= $errors['image2'] ?? "" ?></p>
                 </div>
 
                 <div class="pl-2 flex flex-col gap-1">
                     <span class="font-semibold text-sm">Image 3 <span class="font-light">(obligatoire)</span></span>
-                    <input type="file" class="file-input w-full" name="image3" />
+                    <input type="file" class="file-input w-full" name="3" />
                     <p class="text-xs font-light opacity-60"><?= $errors['image3'] ?? "" ?></p>
                 </div>
             </div>

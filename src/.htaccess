@@ -6,6 +6,7 @@ RewriteRule ^portfolio$ src/Controller/controller-gallery.php [L,QSA]
 RewriteRule ^project$ src/Controller/controller-projets.php [L,QSA]
 RewriteRule ^about$ src/Controller/controller-about.php [L,QSA]
 RewriteRule ^contact$ src/Controller/controller-contact.php [L,QSA]
+RewriteRule ^legal$ src/View/view-legal.php [L,QSA]
 
 RewriteRule ^admin$ src/Controller/controller-dashboard.php [L,QSA]
 RewriteRule ^login$ src/Controller/controller-login.php [L,QSA]

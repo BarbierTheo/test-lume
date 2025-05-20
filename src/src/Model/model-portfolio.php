@@ -238,7 +238,7 @@ class Portfolio
      *
      * @return oneImage|string Lien vers l'image
      */
-    public static function getOneImage($projectId, $img_index)
+    public static function getOneImage(int $projectId, int $img_index)
     {
         $pdo = Database::getConnection();
 
@@ -254,5 +254,21 @@ class Portfolio
         return $oneImage;
     }
 
+    /**
+     * Supprimer projet du portfolio, puis ses images par cascade
+     *
+     * @return boolean true si executé, false si ne marche pas
+     */
+    public static function deleteProject(int $id)
+    {
+        $pdo = Database::getConnection();
+
+        $sql = "DELETE FROM `lume_project` WHERE `project_id` = :id";
+        $stmt = $pdo->prepare($sql);
+
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+
+        return $stmt->execute();
+    }
     
 }

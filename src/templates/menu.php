@@ -33,15 +33,15 @@
 
 
 
-<header class="navbar fixed z-20 flex justify-between p-4 items-center">
+<header class="navbar fixed z-50 flex justify-between p-4 items-center">
 
     <div class="">
-        <a href="/index.php" class="logo pt-6 h-full"> <img src="../../img/testlogo.png" alt="" class="ml-6 w-32 lg:w-38 self-center"></a>
+        <a href="/home" class="logo pt-6 h-full"> <img src="../../img/testlogo.png" alt="" class="ml-6 w-32 lg:w-38 self-center"></a>
     </div>
 
     <div class="hidden lg:flex">
         <ul class="menu menu-horizontal px-1 mr-4 flex xl:gap-6 text-lg uppercase font-semibold">
-            <li><a href="/index.php">Accueil</a></li>
+            <li><a href="/home">Accueil</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/portfolio">Portfolio</a></li>
             <li><a href="/about">A propos</a></li>
@@ -57,7 +57,7 @@
                 </svg>
             </label>
             <ul tabindex="0" class="menu dropdown-content p-2 w-80 bg-zinc-950/90">
-                <li class="p-2"><a href="/index.php">Accueil</a></li>
+                <li class="p-2"><a href="/home">Accueil</a></li>
                 <li class="p-2"><a href="/services">Services</a></li>
                 <li class="p-2"><a href="/portfolio">Portfolio</a></li>
                 <li class="p-2"><a href="/about">A propos</a></li>

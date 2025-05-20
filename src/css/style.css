@@ -146,3 +146,13 @@
 .title1 {
   @apply text-3xl lg:text-5xl uppercase font-bold;
 }
+
+
+/* FAQ affichage des messages */
+.collapse-content div em, 
+.collapse-content div i, 
+.collapse-content div span {
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+}

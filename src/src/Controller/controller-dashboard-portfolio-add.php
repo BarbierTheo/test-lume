@@ -47,18 +47,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     for ($i = 1; $i <= 9; $i++) {
-        if (isset($_FILES["image$i"])) {
+        if (isset($_FILES["$i"])) {
 
             if ($i <= 3) {
-                if (empty($_FILES["image$i"]['name'])) {
-                    $errors["image$i"] = "Veuillez ajouter une image (3 images obligatoire)";
+                if (empty($_FILES["$i"]['name'])) {
+                    $errors["$i"] = "Veuillez ajouter une image (3 images obligatoire)";
                 }
             }
 
-            if ($_FILES["image$i"]['type'] != "image/png" && $_FILES["image$i"]['type'] != "image/jpeg") {
+            if ($_FILES["$i"]['type'] != "image/png" && $_FILES["$i"]['type'] != "image/jpeg") {
                 $errors["image$i"] = "Veuillez ajouter au format JPG ou PNG";
-            } else if ($_FILES["image$i"]['error'] !== 0) {
-                $errors["image$i"] = "Erreur d'upload";
+            } else if ($_FILES["$i"]['error'] !== 0) {
+                $errors["$imagei"] = "Erreur d'upload";
             }
         }
     }
@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $newName = uniqid() . "_" . basename($value['name']);
                 $target_file = $project_directory . $newName;
 
-                if (move_uploaded_file($_FILES["image$i"]["tmp_name"], $target_file)) {
+                if (move_uploaded_file($_FILES["$i"]["tmp_name"], $target_file)) {
 
                     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
                     if ($imageFileType == "jpg" || $imageFileType == "jpeg") {
@@ -119,7 +119,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         Portfolio::addImagesToProject($images, $LastIdProject);
 
 
-        // var_dump($images);
         header('Location: /admin/portfolio');
         exit;
     }

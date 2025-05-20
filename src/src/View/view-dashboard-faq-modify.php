@@ -39,8 +39,6 @@
             <span class="px-6 text-sm"><?= $actualFaq['faq_article'] ?></span>
 
             <ul class="list-disc py-4 px-8 gap-1 text-xs font-light opacity-60">
-                <li>Le contenu de l’article doit être rédigé en Markdown (titres, listes, liens, etc.).</li>
-                <li>Pour tester ou prévisualiser votre contenu avant de l’ajouter, vous pouvez utiliser un éditeur en ligne comme : <a href="https://markdownlivepreview.com/" class="underline font-semibold">https://markdownlivepreview.com/</a></li>
                 <li>Les réponses doivent être claires, concises et utiles pour les utilisateurs du site.</li>
                 <li>Évitez les formulations trop techniques si ce n’est pas nécessaire.</li>
                 <li>Vérifiez l’orthographe et la lisibilité avant de valider l’ajout.</li>
