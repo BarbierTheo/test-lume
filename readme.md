@@ -1,8 +1,5 @@
 # Lume
 
-**Description**  
-Site vitrine pour une agence d’architecture développé en PHP avec architecture MVC, base de données MySQL, front avec Tailwind CSS, DaisyUI, et intégration JavaScript.
-
 ---
 
 ## Prérequis
