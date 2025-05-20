@@ -86,7 +86,7 @@
                 F.A.Q.
             </a>
         </div>
-        <div class="flex flex-col mt-60 gap-4 justify-center items-center">
+        <div class="flex flex-col mt-40 gap-4 justify-center items-center">
             <a href="/src/Controller/controller-logout.php" class="btn">Déconnexion</a>
             <a href="/index.php" class="text-neutral-400 underline">Accès au site</a>
         </div>

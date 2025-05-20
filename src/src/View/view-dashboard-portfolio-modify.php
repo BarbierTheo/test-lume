@@ -121,7 +121,7 @@
             <div class="flex justify-between">
                 <a href="" class="w-fit btn">Annuler</a>
                 <div>
-                    <a href="/src/controller/controller-projectdelete.php?projet=<?= $_GET['projet'] ?>" class="w-fit btn !bg-red-600/30">Supprimer</a>
+                    <a href="/src/Controller/controller-projectdelete.php?projet=<?= $_GET['projet'] ?>" class="w-fit btn !bg-red-600/30">Supprimer</a>
                 </div>
             </div>
         </div>

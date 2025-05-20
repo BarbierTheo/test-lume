@@ -7,7 +7,6 @@ Site vitrine pour une agence d’architecture développé en PHP avec architectu
 
 ## Prérequis
 - Docker
-- Node.js et npm (pour le build front-end)
 
 ---
 
@@ -16,15 +15,6 @@ Site vitrine pour une agence d’architecture développé en PHP avec architectu
 Cloner le dépôt  
 ```bash
 git clone https://github.com/BarbierTheo/test-lume.git
-```
-
----
-
-## 2 - Installer les dépendances
-
-Installer NPM  
-```bash
-npm install
 ```
 
 ---
