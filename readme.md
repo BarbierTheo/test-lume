@@ -18,7 +18,10 @@ git clone https://github.com/BarbierTheo/test-lume.git
 
 ## 2 - Lancer Docker Desktop, et lancer les conteneurs
 
+Penser à ouvrir le dossier lume dans le terminal car le docker-compose s'y trouve
+
 ```bash
+cd lume
 docker compose up -d --build
 ```
 
