@@ -81,6 +81,10 @@ switch ($uri) {
         require __DIR__ . '/../src/Controller/controller-projectdelete.php';
         break;
 
+    case 'admin/portfolio/imgdelete':
+        require __DIR__ . '/../src/Controller/controller-imagedelete.php';
+        break;
+
     case 'logout':
         require __DIR__ . '/../src/Controller/controller-logout.php';
         break;

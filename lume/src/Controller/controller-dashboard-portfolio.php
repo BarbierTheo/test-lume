@@ -10,9 +10,16 @@ require_once __DIR__ . "/../Helpers/helper.php";
 require_once __DIR__ . "/../Model/model-database.php";
 require_once __DIR__ . "/../Model/model-portfolio.php";
 
-$projects = Portfolio::getAllProjects();
 $countProjects = Portfolio::countAllProjects();
 $countImages = Portfolio::countAllImages();
+
+if (!empty($_GET['search'])) {
+    $projects = Portfolio::searchProject($_GET['search']);
+} else {
+    $projects = Portfolio::getAllProjects();
+}
+
+
 
 // var_dump($countImages);
 

@@ -18,6 +18,7 @@ if (!isset($_GET['projet']) || empty($_GET['projet']) || !is_numeric($_GET['proj
     $actualProject = Portfolio::getOneProject($_GET['projet']);
     $images = Portfolio::getImgFromProject($_GET['projet']);
     $nbImages = count($images);
+    $imgInProject =  Portfolio::countAllImagesByProject($_GET['projet']);
 }
 
 
@@ -97,15 +98,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         Portfolio::updateProject($safePost, $_GET['projet']);
 
-        $project_directory = "../../img/projects/" . $_GET['projet'] . "/";
+        $project_directory = ROOT . '/img/projects/' . $_GET['projet'] . '/';
 
         for ($i = 1; $i <= 9; $i++) {
             if (!empty($_FILES["$i"]['name'])) {
                 // Si une image est déjà indexé à la place où elle est, update
                 if (Portfolio::getOneImage($_GET['projet'], $i)) {
 
-                    unlink(Portfolio::getOneImage($_GET['projet'], $i)['img_url']);
-
+                    $imagePath = ROOT . Portfolio::getOneImage($_GET['projet'], $i)['img_url'];
+                    if (file_exists($imagePath)) {
+                        unlink($imagePath);
+                    }
                     $newName = uniqid() . "_" . basename($_FILES["$i"]['name']);
                     $target_file = $project_directory . $newName;
 
@@ -123,8 +126,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         if (file_exists($target_file)) {
                             unlink($target_file);
                         }
-
-                        Portfolio::updateImage($imageName, Portfolio::getOneImage($_GET['projet'], $i)['img_id']);
+                        $nameForDB = '/img/projects/' . $_GET['projet'] . '/' . pathinfo($newName, PATHINFO_FILENAME) . '.webp';
+                        Portfolio::updateImage($nameForDB, Portfolio::getOneImage($_GET['projet'], $i)['img_id']);
                     } else {
                         echo "Sorry, there was an error uploading your file.";
                     }
@@ -151,7 +154,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             unlink($target_file);
                         }
 
-                        Portfolio::addImageToProject($imageName, (Portfolio::countImageProject($_GET['projet']) + 1), $_GET['projet']);
+                        $nameForDB = '/img/projects/' . $_GET['projet'] . '/' . pathinfo($newName, PATHINFO_FILENAME) . '.webp';
+                        Portfolio::addImageToProject($nameForDB, (Portfolio::countImageProject($_GET['projet']) + 1), $_GET['projet']);
                     } else {
                         echo "Sorry, there was an error uploading your file.";
                     }
@@ -159,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
 
-        header('Location: /admin/portfolio');
+        header('Location: /admin/portfolio/modify?projet=' . $_GET['projet']);
         exit;
     }
 }

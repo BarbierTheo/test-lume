@@ -107,8 +107,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     if (file_exists($target_file)) {
                         unlink($target_file);
                     }
-                    
-                    $imageName = "../../img/projects/" . $LastIdProject . "/" . pathinfo($newName, PATHINFO_FILENAME) . ".webp";
+
+                    $imageName = "/img/projects/" . $LastIdProject . "/" . pathinfo($newName, PATHINFO_FILENAME) . ".webp";
                     array_push($images, $imageName);
                 } else {
                     echo "Sorry, there was an error uploading your file.";

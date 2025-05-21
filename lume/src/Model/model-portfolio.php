@@ -102,8 +102,6 @@ class Portfolio
 
         $hasSurface = !empty($safepost['surface']);
 
-        // $sql = "INSERT INTO `lume_project`(`project_name`, `project_tagline`, `project_description`, `project_date`, `project_place`, " . ($hasSurface ? "`project_area`," : "") . " `category_id`) 
-        // VALUES (:title, :tagline, :description, :date, :place, " . ($hasSurface ? ":area," : "") . ":category)";
         $sql = "UPDATE `lume_project` SET `project_name`= :title,
                                     `project_tagline`= :tagline,
                                     `project_description`= :description,
@@ -234,6 +232,20 @@ class Portfolio
     }
 
     /**
+     * Compte le nombres d'images dans le projet
+     *
+     * @return result|int Nombres d'images pour le projet
+     */
+    public static function countAllImagesByProject(int $project_id)
+    {
+        $pdo = Database::getConnection();
+
+        $stmt = $pdo->query("SELECT count('img_id') AS `count` FROM lume_img WHERE `project_id` = " . $project_id);
+        $result = $stmt->fetch();
+        return $result['count'];
+    }
+
+    /**
      * Récupère l'URL d'une image selon le projet et son ordre
      *
      * @return oneImage|string Lien vers l'image
@@ -255,7 +267,27 @@ class Portfolio
     }
 
     /**
-     * Supprimer projet du portfolio, puis ses images par cascade
+     * Récupère l'URL d'une image selon le projet et son ordre
+     *
+     * @return oneImage|string Lien vers l'image
+     */
+    public static function getImageById(int $id)
+    {
+        $pdo = Database::getConnection();
+
+        $sql = "SELECT `img_url` FROM `lume_img` WHERE `img_id` = :id";
+        $stmt = $pdo->prepare($sql);
+
+        $stmt->bindValue(':id', Safe::input($id), PDO::PARAM_INT);
+
+        $stmt->execute();
+
+        $oneImage = $stmt->fetch();
+        return $oneImage;
+    }
+
+    /**
+     * Supprime un projet du portfolio, puis ses images par cascade
      *
      * @return boolean true si executé, false si ne marche pas
      */
@@ -270,5 +302,42 @@ class Portfolio
 
         return $stmt->execute();
     }
-    
+
+
+    /**
+     * Supprime une image du projet
+     *
+     * @return boolean true si executé, false si ne marche pas
+     */
+    public static function deleteImage(int $id)
+    {
+        $pdo = Database::getConnection();
+
+        $sql = "DELETE FROM `lume_img` WHERE `img_id` = :id";
+        $stmt = $pdo->prepare($sql);
+
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+
+        return $stmt->execute();
+    }
+
+    /**
+     * Récupère tous les projets par mot de recherche
+     *
+     * @return projects|array Tableau contenant tous les projets
+     */
+    public static function searchProject($search)
+    {
+        $search = "%" . Safe::input($search) . "%";
+        $pdo = Database::getConnection();
+
+        $stmt = $pdo->prepare("SELECT `project_id`, `project_name`, `project_tagline`, `project_description`, `project_date`, `project_place`, `project_area`, `project_timestamp`, `category_id`, `img_url` 
+        FROM `lume_project` NATURAL JOIN `lume_img` WHERE `img_order` = 1 AND `project_name` LIKE :search 
+        ORDER BY `project_id` DESC");
+        $stmt->bindValue(':search', $search, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $projects = $stmt->fetchAll();
+        return $projects;
+    }
 }

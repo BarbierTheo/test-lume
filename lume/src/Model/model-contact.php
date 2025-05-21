@@ -162,7 +162,4 @@ class Contact
 
         return $stmt->execute();
     }
-
-    // UPDATE `lume_contact` SET `contact_status`='read' WHERE `contact_id`
-
 }
