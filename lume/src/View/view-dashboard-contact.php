@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         <div class="flex gap-4">
-                            <span class="text-sm opacity-60 hidden lg:flex">il y a 11 heures</span>
+                            <span class="text-sm opacity-60 hidden lg:flex"><?= Helpers::difference_date($value['contact_timestamp']) ?></span>
 
                             <?php switch ($value['contact_status']) {
                                 case "unread":
@@ -97,7 +97,7 @@
                         </span>
                         <div class="flex flex-col md:flex-row w-full mt-8 gap-4 lg:gap-0">
                             <div class="lg:w-[50%] flex flex-col gap-1">
-                                <span class="font-semibold opacity-60 flex lg:hidden">Envoyé il y a 11 heures</span>
+                                <span class="font-semibold opacity-60 flex lg:hidden">Envoyé <?= Helpers::difference_date($value['contact_timestamp']) ?></span>
                                 <span class="font-semibold opacity-60">Adresse e-mail: <?= $value['contact_email'] ?></span>
                                 <span class="font-semibold opacity-60">Numéro de téléphone: <?= $value['contact_telephone'] ?></span>
                             </div>

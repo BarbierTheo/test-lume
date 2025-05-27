@@ -42,7 +42,7 @@ include_once __DIR__ . '/../../templates/loader.php';
                 <span class="opacity-80 text-light"><?= $project['project_date'] ?></span>
             </div>
             <div class="flex flex-col items-end">
-                <span class="opacity-80 text-light"><?= $project['project_area'] . " m²" ?? "" ?></span>
+                <span class="opacity-80 text-light"><?= !empty($project['project_area']) ? $project['project_area'] . " m²" : "" ; ?></span>
                 <span class="uppercase font-semibold"><?= $project['project_place'] ?></span>
             </div>
         </div>

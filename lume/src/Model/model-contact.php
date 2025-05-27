@@ -12,7 +12,7 @@ class Contact
     {
         $pdo = Database::getConnection();
 
-        $stmt = $pdo->query("SELECT `contact_id`,`contact_nom`,`contact_prenom` ,`contact_email`, `contact_telephone`, `contact_title`, `contact_message`, `contact_status` FROM lume_contact ORDER BY `contact_id` DESC");
+        $stmt = $pdo->query("SELECT `contact_id`,`contact_nom`,`contact_prenom` ,`contact_email`, `contact_telephone`, `contact_title`, `contact_message`, `contact_status`, `contact_timestamp` FROM lume_contact ORDER BY `contact_id` DESC");
         $messages = $stmt->fetchAll();
         return $messages;
     }
@@ -26,7 +26,7 @@ class Contact
     {
         $pdo = Database::getConnection();
 
-        $stmt = $pdo->prepare("SELECT `contact_id`,`contact_nom`,`contact_prenom` ,`contact_email`, `contact_telephone`, `contact_title`, `contact_message`, `contact_status` FROM lume_contact WHERE `contact_status` = :status ORDER BY `contact_id` DESC");
+        $stmt = $pdo->prepare("SELECT `contact_id`,`contact_nom`,`contact_prenom` ,`contact_email`, `contact_telephone`, `contact_title`, `contact_message`, `contact_status`, `contact_timestamp` FROM lume_contact WHERE `contact_status` = :status ORDER BY `contact_id` DESC");
         $stmt->bindValue(':status', Safe::input($status), PDO::PARAM_STR);
         $stmt->execute();
 
@@ -44,7 +44,7 @@ class Contact
         $search = "%" . Safe::input($search) . "%";
         $pdo = Database::getConnection();
 
-        $stmt = $pdo->prepare("SELECT `contact_id`,`contact_nom`,`contact_prenom` ,`contact_email`, `contact_telephone`, `contact_title`, `contact_message`, `contact_status` 
+        $stmt = $pdo->prepare("SELECT `contact_id`,`contact_nom`,`contact_prenom` ,`contact_email`, `contact_telephone`, `contact_title`, `contact_message`, `contact_status`, `contact_timestamp`
         FROM lume_contact WHERE `contact_nom` LIKE :search 
         OR `contact_email` LIKE :search
         OR `contact_title` LIKE :search
