@@ -29,6 +29,10 @@ switch ($uri) {
         require __DIR__ . '/../src/Controller/controller-contact.php';
         break;
 
+    case 'faq':
+        require __DIR__ . '/../src/Controller/controller-faq.php';
+        break;
+
     case 'legal':
         require __DIR__ . '/../src/View/view-legal.php';
         break;

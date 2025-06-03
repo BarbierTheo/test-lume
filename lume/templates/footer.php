@@ -15,7 +15,7 @@
 
     <div class="flex flex-col gap-2 my-2">
         <a href="/legal">Mentions légales</a>
-        <a href="">Foire aux questions</a>
+        <a href="/faq">Foire aux questions</a>
     </div>
 
 

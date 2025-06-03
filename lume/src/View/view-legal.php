@@ -3,8 +3,7 @@ include_once __DIR__ . '/../../templates/head.php';
 include_once __DIR__ . '/../../templates/chatbot.php';
 include_once __DIR__ . '/../../templates/menu.php';
 include_once __DIR__ . '/../../templates/loader.php';
-?>
-<?php include_once "../../templates/carousel.php" ?>
+include_once __DIR__ . "/../../templates/carousel.php" ?>
 
 
 <main class="lg:max-w-[1200px] min-h-[100vh] px-4 lg:mx-auto flex flex-col mt-8 mb-32">
