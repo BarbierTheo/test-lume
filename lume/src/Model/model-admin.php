@@ -19,7 +19,7 @@ class Admin
         $stmt->rowCount() == 0 ? $found = false : $found = true;
         $admin = $stmt->fetch(PDO::FETCH_ASSOC);
         $connected = false;
-        if ($found == true && $password == $admin['admin_password']){
+        if ($found == true && password_verify($password, $admin['admin_password'])){
             $connected = true;
             $_SESSION = $admin;
             unset($_SESSION['admin_password']);
