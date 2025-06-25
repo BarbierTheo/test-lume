@@ -13,7 +13,12 @@ class Portfolio
     {
         $pdo = Database::getConnection();
 
-        $stmt = $pdo->query("SELECT `project_id`, `project_name`, `project_tagline`, `project_description`, `project_date`, `project_place`, `project_area`, `project_timestamp`, `category_id`, `img_url` FROM `lume_project` NATURAL JOIN `lume_img` WHERE `img_order` = 1  ORDER BY `project_id` DESC");
+        $stmt = $pdo->query("SELECT `project_id`, `project_name`, `project_tagline`, 
+        `project_description`, `project_date`, `project_place`, 
+        `project_area`, `project_timestamp`, `category_id`, `img_url` 
+        FROM `lume_project` 
+        NATURAL JOIN `lume_img` 
+        WHERE `img_order` = 1  ORDER BY `project_id` DESC");
         $projects = $stmt->fetchAll();
         return $projects;
     }
@@ -69,7 +74,8 @@ class Portfolio
 
         $hasSurface = !empty($safepost['surface']);
 
-        $sql = "INSERT INTO `lume_project`(`project_name`, `project_tagline`, `project_description`, `project_date`, `project_place`, " . ($hasSurface ? "`project_area`," : "") . " `category_id`) 
+        $sql = "INSERT INTO `lume_project`(`project_name`, `project_tagline`, `project_description`, 
+        `project_date`, `project_place`, " . ($hasSurface ? "`project_area`," : "") . " `category_id`) 
         VALUES (:title, :tagline, :description, :date, :place, " . ($hasSurface ? ":area," : "") . ":category)";
         $stmt = $pdo->prepare($sql);
 
@@ -80,7 +86,7 @@ class Portfolio
         $stmt->bindValue(':place', Safe::input($safepost['place']), PDO::PARAM_STR);
 
         if ($hasSurface) {
-            $stmt->bindValue(':area', Safe::input($safepost['surface']), PDO::PARAM_STR);
+            $stmt->bindValue(':area', Safe::input($safepost['surface']), PDO::PARAM_INT);
         }
 
         $stmt->bindValue(':category', Safe::input($safepost['categorie']), PDO::PARAM_INT);

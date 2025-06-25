@@ -61,7 +61,7 @@ include_once __DIR__ . '/../../templates/loader.php';
                         <span class="opacity-80 text-left ml-4"><?= $errors['subject'] ?? "" ?></span>
 
                         <label class="label">Message</label>
-                        <textarea name="message" class="textarea w-full max-h-[18rem]" placeholder="La limite est de 250 caractères"><?= $_POST['message'] ?? "" ?></textarea>
+                        <textarea name="message" class="textarea w-full max-h-[18rem]" placeholder="La limite est de 2000 caractères"><?= $_POST['message'] ?? "" ?></textarea>
                         <span class="opacity-80 text-left ml-4"><?= $errors['message'] ?? "" ?></span>
 
                     </fieldset>

@@ -1,10 +1,7 @@
 <?php
 include_once __DIR__ . '/../../templates/head.php';
-include_once __DIR__ . '/../../templates/chatbot.php';
 include_once __DIR__ . '/../../templates/menu.php';
-include_once __DIR__ . '/../../templates/carousel.php';
-include_once __DIR__ . '/../../templates/loader.php';
-?>
+include_once __DIR__ . '/../../templates/carousel.php'; ?>
 
 
 <main class="lg:max-w-[1200px] px-4 lg:mx-auto">
@@ -47,20 +44,21 @@ include_once __DIR__ . '/../../templates/loader.php';
             ?>
 
                     <div class="col-span-1 row-span-2 flex flex-col gap-2">
-                        <a href="" class="flex justify-between items-center">
+                        <a href="project?id=<?= $projects[$i]["project_id"] ?>" class="flex justify-between items-center">
                             <span class="text-sm font-bold uppercase"><?= $projects[$i]["project_name"] ?></span>
                             <span class="text-sm font-light"><?= $projects[$i]["project_date"] ?></span>
                         </a>
                         <div class="relative h-full">
                             <img src="<?= $projects[$i]["img_url"] ?>" alt="" class="w-full h-full object-cover max-h-[50rem]">
-                            <a href="project?id=<?= $projects[$i]["project_id"] ?>" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
+                            <a href="project?id=<?= $projects[$i]["project_id"] ?>" 
+                            class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
                         </div>
                     </div>
 
                 <?php } else { ?>
 
                     <div class="col-span-1 lg:col-span-2 flex flex-col gap-2">
-                        <a href="" class="flex justify-between items-center">
+                        <a href="project?id=<?= $projects[$i]["project_id"] ?>" class="flex justify-between items-center">
                             <span class="text-sm font-bold uppercase"><?= $projects[$i]["project_name"] ?></span>
                             <span class="text-sm font-light"><?= $projects[$i]["project_date"] ?></span>
                         </a>

@@ -25,12 +25,12 @@
                         </svg>
                         <div class="font-light text-md">Total d'images : <span class="font-semibold"><?= $countImages ?></span></div>
                     </li>
-                    <li class="list-row">
+                    <!-- <li class="list-row">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)">
                             <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm3.293 14.707L11 12.414V6h2v5.586l3.707 3.707-1.414 1.414z"></path>
                         </svg>
                         <div class="font-light text-md">Dernier projet ajouté le : <span class="font-semibold">4 mai 2025</span></div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
 

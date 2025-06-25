@@ -1,10 +1,9 @@
-let maximg = 9
+
 
 let images = parseInt(divimg.dataset.images);
-console.log(images);
+let maximg = 9
 
 document.getElementById('addimg').addEventListener('click', () => {
-
     if (images < maximg) {
         images++
         document.getElementById('divimg').insertAdjacentHTML('beforeend', `
@@ -13,5 +12,4 @@ document.getElementById('addimg').addEventListener('click', () => {
                             <input type="file" class="file-input w-full" name="${images}" />
                         </div>`);
     }
-
 })

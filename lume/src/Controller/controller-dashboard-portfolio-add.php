@@ -17,11 +17,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty(Safe::input($_POST['title']))) {
         $errors['title'] = "Veuillez ajouter un titre";
     } else if (strlen(Safe::input($_POST['title'])) > 150) {
-        $errors['title'] = "Titre trop long, 150 caractères maximum";
+        $errors['title'] = "Titre trop long, 50 caractères maximum";
+    } else if (strlen(Safe::input($_POST['title'])) < 8) {
+        $errors['title'] = "Titre trop court, 8 caractères minimum";
     }
 
     if (empty(Safe::input($_POST['tagline']))) {
         $errors['tagline'] = "Veuillez ajouter une tagline au projet";
+    } else if (strlen(Safe::input($_POST['tagline'])) > 150) {
+        $errors['title'] = "Tagline trop longue, 200 caractères maximum";
+    } else if (strlen(Safe::input($_POST['tagline'])) < 8) {
+        $errors['title'] = "Targline trop courte, 8 caractères minimum";
     }
 
     if (empty(Safe::input($_POST['description']))) {
@@ -68,6 +74,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (empty($errors)) {
 
+        // $i = 0;
+
         $safePost = [
             'title' => Safe::input($_POST['title']),
             'tagline' => Safe::input($_POST['tagline']),
@@ -85,7 +93,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $project_directory = ROOT . "/img/projects/$LastIdProject/";
         mkdir($project_directory, 0700);
 
-        $i = 0;
 
         foreach ($_FILES as $value) {
             if (!empty($value['name'])) {
@@ -111,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $imageName = "/img/projects/" . $LastIdProject . "/" . pathinfo($newName, PATHINFO_FILENAME) . ".webp";
                     array_push($images, $imageName);
                 } else {
-                    echo "Sorry, there was an error uploading your file.";
+                    echo "Erreur durant l'upload de l'image.";
                 }
             }
         }

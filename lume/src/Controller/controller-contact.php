@@ -2,7 +2,6 @@
 
 require_once __DIR__ . "/../Model/model-database.php";
 require_once __DIR__ . "/../Helpers/helper.php";
-require_once __DIR__ . "/../Model/model-faq.php";
 require_once __DIR__ . "/../Model/model-contact.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

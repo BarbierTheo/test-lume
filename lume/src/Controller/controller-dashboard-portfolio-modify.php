@@ -17,7 +17,7 @@ if (!isset($_GET['projet']) || empty($_GET['projet']) || !is_numeric($_GET['proj
 } else {
     $actualProject = Portfolio::getOneProject($_GET['projet']);
     $images = Portfolio::getImgFromProject($_GET['projet']);
-    $nbImages = count($images);
+    // $nbImages = count($images);
     $imgInProject =  Portfolio::countAllImagesByProject($_GET['projet']);
 }
 
@@ -29,16 +29,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Gestion des erreurs
 
-    // Titre
     if (empty(Safe::input($_POST['title']))) {
         $errors['title'] = "Veuillez ajouter un titre";
     } else if (strlen(Safe::input($_POST['title'])) > 150) {
-        $errors['title'] = "Titre trop long, 150 caractères maximum";
+        $errors['title'] = "Titre trop long, 50 caractères maximum";
+    } else if (strlen(Safe::input($_POST['title'])) < 8) {
+        $errors['title'] = "Titre trop court, 8 caractères minimum";
     }
 
-    // Tagline
     if (empty(Safe::input($_POST['tagline']))) {
         $errors['tagline'] = "Veuillez ajouter une tagline au projet";
+    } else if (strlen(Safe::input($_POST['tagline'])) > 150) {
+        $errors['title'] = "Tagline trop longue, 200 caractères maximum";
+    } else if (strlen(Safe::input($_POST['tagline'])) < 8) {
+        $errors['title'] = "Targline trop courte, 8 caractères minimum";
     }
 
     // Description

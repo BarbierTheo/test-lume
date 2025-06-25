@@ -113,7 +113,8 @@ class Contact
     {
         $pdo = Database::getConnection();
 
-        $sql = "INSERT INTO `lume_contact`(`contact_nom`, `contact_prenom`, `contact_email`, `contact_telephone`, `contact_title`, `contact_message`, `contact_status`) VALUES 
+        $sql = "INSERT INTO `lume_contact`(`contact_nom`, `contact_prenom`, `contact_email`, `contact_telephone`, 
+        `contact_title`, `contact_message`, `contact_status`) VALUES 
         (:surname, :firstname, :email, :tel, :title, :message, 'unread')";
         $stmt = $pdo->prepare($sql);
 
