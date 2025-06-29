@@ -6,95 +6,95 @@ define('ROOT', __DIR__);
 switch ($uri) {
     case '':
     case 'home':
-        require __DIR__ . '/../src/Controller/controller-home.php';
+        require ROOT . '/../src/Controller/controller-home.php';
         break;
 
     case 'services':
-        require __DIR__ . '/../src/Controller/controller-services.php';
+        require ROOT . '/../src/Controller/controller-services.php';
         break;
 
     case 'portfolio':
-        require __DIR__ . '/../src/Controller/controller-gallery.php';
+        require ROOT . '/../src/Controller/controller-gallery.php';
         break;
 
     case 'project':
-        require __DIR__ . '/../src/Controller/controller-projets.php';
+        require ROOT . '/../src/Controller/controller-projets.php';
         break;
 
     case 'about':
-        require __DIR__ . '/../src/Controller/controller-about.php';
+        require ROOT . '/../src/Controller/controller-about.php';
         break;
 
     case 'contact':
-        require __DIR__ . '/../src/Controller/controller-contact.php';
+        require ROOT . '/../src/Controller/controller-contact.php';
         break;
 
     case 'faq':
-        require __DIR__ . '/../src/Controller/controller-faq.php';
+        require ROOT . '/../src/Controller/controller-faq.php';
         break;
 
     case 'legal':
-        require __DIR__ . '/../src/View/view-legal.php';
+        require ROOT . '/../src/View/view-legal.php';
         break;
 
     case 'admin':
-        require __DIR__ . '/../src/Controller/controller-dashboard.php';
+        require ROOT . '/../src/Controller/controller-dashboard.php';
         break;
 
     case 'login':
-        require __DIR__ . '/../src/Controller/controller-login.php';
+        require ROOT . '/../src/Controller/controller-login.php';
         break;
 
     case 'admin/contact':
-        require __DIR__ . '/../src/Controller/controller-dashboard-contact.php';
+        require ROOT . '/../src/Controller/controller-dashboard-contact.php';
         break;
 
     case 'admin/contact/delete':
-        require __DIR__ . '/../src/Controller/controller-contactdelete.php';
+        require ROOT . '/../src/Controller/controller-contactdelete.php';
         break;
 
     case 'admin/faq':
-        require __DIR__ . '/../src/Controller/controller-dashboard-faq.php';
+        require ROOT . '/../src/Controller/controller-dashboard-faq.php';
         break;
 
     case 'admin/faq/add':
-        require __DIR__ . '/../src/Controller/controller-dashboard-faq-add.php';
+        require ROOT . '/../src/Controller/controller-dashboard-faq-add.php';
         break;
 
     case 'admin/faq/modify':
-        require __DIR__ . '/../src/Controller/controller-dashboard-faq-modify.php';
+        require ROOT . '/../src/Controller/controller-dashboard-faq-modify.php';
         break;
 
     case 'admin/faq/delete':
-        require __DIR__ . '/../src/Controller/controller-faqdelete.php';
+        require ROOT . '/../src/Controller/controller-faqdelete.php';
         break;
 
     case 'admin/portfolio':
-        require __DIR__ . '/../src/Controller/controller-dashboard-portfolio.php';
+        require ROOT . '/../src/Controller/controller-dashboard-portfolio.php';
         break;
 
     case 'admin/portfolio/add':
-        require __DIR__ . '/../src/Controller/controller-dashboard-portfolio-add.php';
+        require ROOT . '/../src/Controller/controller-dashboard-portfolio-add.php';
         break;
 
     case 'admin/portfolio/modify':
-        require __DIR__ . '/../src/Controller/controller-dashboard-portfolio-modify.php';
+        require ROOT . '/../src/Controller/controller-dashboard-portfolio-modify.php';
         break;
 
     case 'admin/portfolio/delete':
-        require __DIR__ . '/../src/Controller/controller-projectdelete.php';
+        require ROOT . '/../src/Controller/controller-projectdelete.php';
         break;
 
     case 'admin/portfolio/imgdelete':
-        require __DIR__ . '/../src/Controller/controller-imagedelete.php';
+        require ROOT . '/../src/Controller/controller-imagedelete.php';
         break;
 
     case 'logout':
-        require __DIR__ . '/../src/Controller/controller-logout.php';
+        require ROOT . '/../src/Controller/controller-logout.php';
         break;
 
     default:
         http_response_code(404);
-        require __DIR__ . '/../src/View/404.php';
+        require ROOT . '/../src/View/404.php';
         break;
 }

@@ -5,7 +5,7 @@ include_once __DIR__ . '/../../templates/carousel.php'; ?>
 
 
 <main class="lg:max-w-[1200px] px-4 lg:mx-auto">
-
+    <h1 class="sr-only">Agence d'architecture sur Rouen</h1>
     <!-- CONSTRUIRE, IMAGINER, REINVENTER -->
     <section class="flex flex-col justify-center gap-4 py-16 text-white">
         <div class="flex flex-col leading-8 lg:leading-12 title1">
@@ -14,7 +14,7 @@ include_once __DIR__ . '/../../templates/carousel.php'; ?>
             <span>réinventer</span>
         </div>
         <div class="flex flex-col lg:flex-row gap-4">
-            <img src="../../img/index/terrasse.avif" alt="" class="lg:w-[50%] max-h-[40rem] object-cover">
+            <img src="../../img/index/terrasse.avif" alt="terrasse avec hamac" class="lg:w-[50%] max-h-[40rem] object-cover">
             <div class="flex flex-col lg:w-[50%] justify-between">
                 <div class="flex flex-col gap-2">
                     <span>Fondée en 2024, notre agence conçoit des espaces durables, élégants et fonctionnels. Nous accompagnons particuliers et professionnels dans la réalisation de projets uniques, pensés pour s’intégrer harmonieusement à leur environnement.</span>
@@ -44,26 +44,26 @@ include_once __DIR__ . '/../../templates/carousel.php'; ?>
             ?>
 
                     <div class="col-span-1 row-span-2 flex flex-col gap-2">
-                        <a href="project?id=<?= $projects[$i]["project_id"] ?>" class="flex justify-between items-center">
+                        <div class="flex justify-between items-center">
                             <span class="text-sm font-bold uppercase"><?= $projects[$i]["project_name"] ?></span>
                             <span class="text-sm font-light"><?= $projects[$i]["project_date"] ?></span>
-                        </a>
+                        </div>
                         <div class="relative h-full">
-                            <img src="<?= $projects[$i]["img_url"] ?>" alt="" class="w-full h-full object-cover max-h-[50rem]">
-                            <a href="project?id=<?= $projects[$i]["project_id"] ?>" 
-                            class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
+                            <img src="<?= $projects[$i]["img_url"] ?>" alt="image <?= $projects[$i]["project_name"] ?>" class="w-full h-full object-cover max-h-[50rem]">
+                            <a href="project?id=<?= $projects[$i]["project_id"] ?>"
+                                class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
                         </div>
                     </div>
 
                 <?php } else { ?>
 
                     <div class="col-span-1 lg:col-span-2 flex flex-col gap-2">
-                        <a href="project?id=<?= $projects[$i]["project_id"] ?>" class="flex justify-between items-center">
+                        <div class="flex justify-between items-center">
                             <span class="text-sm font-bold uppercase"><?= $projects[$i]["project_name"] ?></span>
                             <span class="text-sm font-light"><?= $projects[$i]["project_date"] ?></span>
-                        </a>
+                        </div>
                         <div class="relative h-full">
-                            <img src="<?= $projects[$i]["img_url"] ?>" alt="" class="w-full h-full object-cover max-h-[23rem]">
+                            <img src="<?= $projects[$i]["img_url"] ?>" alt="image <?= $projects[$i]["project_name"] ?>" class="w-full h-full object-cover max-h-[23rem]">
                             <a href="project?id=<?= $projects[$i]["project_id"] ?>" class="absolute bottom-5 right-5 text-black !bg-white py-2 px-4 font-semibold rounded-full hover:!bg-orange-200 transition-all duration-300">+ d'infos</a>
                         </div>
                     </div>
@@ -92,7 +92,8 @@ include_once __DIR__ . '/../../templates/carousel.php'; ?>
             <?php for ($i = 0; $i < 3; $i++) {  ?>
 
                 <div class="collapse collapse-arrow bg-neutral-950/50 rounded-xl">
-                    <input type="checkbox" />
+                    <input type="checkbox" id="faq-<?= $i ?>" />
+                    <label for="faq-<?= $i ?>" class="sr-only">Ouvrir la question : <?= $faq[$i]["faq_title"] ?></label>
                     <div class="collapse-title font-semibold"><?= $faq[$i]["faq_title"] ?></div>
                     <div class="collapse-content text-sm flex flex-col font-light gap-2">
                         <?= $faq[$i]["faq_article"] ?>
@@ -132,7 +133,7 @@ include_once __DIR__ . '/../../templates/carousel.php'; ?>
                 </div>
                 <div>
                     Ou via notre
-                    <a href="/contact" class="font-bold underline">formulaire de contact</a>
+                    <a href="/contact" class="font-bold hover:underline">formulaire de contact</a>
 
                 </div>
 
@@ -143,7 +144,7 @@ include_once __DIR__ . '/../../templates/carousel.php'; ?>
                 </div>
             </div>
 
-            <img src="../../img/index/Minimalist_Villa.avif" alt="" class="lg:w-[50%] max-h-[40rem] object-cover object-bottom">
+            <img src="../../img/index/Minimalist_Villa.avif" alt="villa du sud" class="lg:w-[50%] max-h-[40rem] object-cover object-bottom">
         </div>
     </section>
 </main>

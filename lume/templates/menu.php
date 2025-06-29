@@ -35,7 +35,7 @@
 
 <nav class="navbar fixed z-50 flex justify-between p-4 items-center">
     <div>
-        <a href="/home" class="logo pt-6 h-full"> <img src="../../img/testlogo.png" alt="" class="ml-6 w-32 lg:w-38 self-center"></a>
+        <a href="/" class="logo pt-6 h-full"> <img src="../../img/testlogo.png" alt="Accueil - Lume" class="ml-6 w-32 lg:w-38 self-center"></a>
     </div>
     <div class="hidden lg:flex">
         <ul class="menu menu-horizontal px-1 mr-4 flex xl:gap-6 text-lg uppercase font-semibold">
@@ -48,11 +48,12 @@
     </div>
     <div class="lg:hidden px-8">
         <div class="dropdown dropdown-end">
-            <label tabindex="0" class="">
+            <button tabindex="0" class="" aria-label="Menu de navigation">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-8 w-8 stroke-current">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
-            </label>
+                <span class="sr-only">Menu de navigation</span>
+            </button>
             <ul tabindex="0" class="menu dropdown-content p-2 w-80 bg-zinc-950/90">
                 <li class="p-2"><a href="/home">Accueil</a></li>
                 <li class="p-2"><a href="/services">Services</a></li>

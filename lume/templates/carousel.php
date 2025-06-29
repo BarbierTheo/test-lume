@@ -1,4 +1,4 @@
-<div class="swiper swiperHeader bg-zinc-950/90"  id="hero">
+<div class="swiper swiperHeader bg-zinc-950/90" id="hero">
 
     <div class="swiper-wrapper">
 
@@ -17,7 +17,7 @@
                                 <span class="text-center lg:self-start text-3xl lg:text-[5rem] font-bold">DESIGN YOUR FUTURE</span>
                                 <div class="hidden lg:flex lg:flex-col text-md lg:text-xl font-semibold">
                                     <span>Chez nous, vos idées prennent forme.</span>
-                                    <span>Des espaces uniques, pensés pour durer et marquer.</span>
+                                    <span>Agence d'architecture</span>
                                 </div>
                             </div>
                             <div class="w-[90%] lg:w-[50%] flex flex-col justify-end gap-8 lg:gap-0">
@@ -49,13 +49,13 @@
                                 <span class="self-center lg:self-start text-3xl lg:text-[5rem] font-bold">SHAPE YOUR SPACES</span>
                                 <div class="flex flex-col text-md lg:text-xl font-semibold">
                                     <span>Nous façonnons des espaces qui inspirent.</span>
-                                    <span>Un design sur-mesure pour chaque projet unique.</span>
+                                    <h1 class="text-md lg:text-xl font-semibold">Agence d'architecture</h1>
                                 </div>
                             </div>
                             <div class="w-[90%] lg:w-[50%] flex flex-col justify-end gap-8 lg:gap-0">
                                 <div class="flex flex-col md:flex-row gap-2 lg:gap-8 items-center lg:items-start w-full justify-end">
-                                    <a href="" class="btn-principal">Commençons à travailler</a>
-                                    <a href="" class="btn-secondaire">Découvrez nous</a>
+                                    <a href="/contact" class="btn-principal">Commençons à travailler</a>
+                                    <a href="/about" class="btn-secondaire">Découvrez nous</a>
                                 </div>
                             </div>
                         </div>
