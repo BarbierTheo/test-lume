@@ -1,8 +1,6 @@
 <?php
 include_once __DIR__ . '/../../templates/head.php';
-include_once __DIR__ . '/../../templates/chatbot.php';
 include_once __DIR__ . '/../../templates/menu.php';
-include_once __DIR__ . '/../../templates/loader.php';
 ?>
 
 

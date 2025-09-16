@@ -3,7 +3,7 @@
 <main class="min-h-screen w-screen flex flex-col lg:flex-row justify-center items-center">
 
     <form method="POST" class="bg-neutral-900 lg:w-[40%] max-w-[30rem] w-[80%] p-4 lg:p-8 rounded-lg shadow-md flex flex-col gap-4" novalidate>
-        <a href="/index.php" class="self-center"><img src="/img/logosansm.png" alt="" class="w-24 mb-4"></a>
+        <a href="/index.php" class="self-center"><img src="/img/logosansm.png" alt="logo_lume" class="w-24 mb-4"></a>
 
         <div class="flex flex-col gap-1">
             <label class="input validator w-full">

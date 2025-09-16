@@ -14,10 +14,9 @@
                     <div class="flex flex-col text-orange-50 w-full gap-4">
                         <div class="flex flex-col lg:flex-row gap-8 lg:gap-0">
                             <div class="w-[90%] lg:w-[50%] flex flex-col justify-between lg:min-h-[22vh] gap-2">
-                                <span class="text-center lg:self-start text-3xl lg:text-[5rem] font-bold">DESIGN YOUR FUTURE</span>
+                                <span class="self-center lg:self-start text-3xl lg:text-[5rem] font-bold">DESIGN YOUR FUTURE</span>
                                 <div class="hidden lg:flex lg:flex-col text-md lg:text-xl font-semibold">
                                     <span>Chez nous, vos idées prennent forme.</span>
-                                    <span>Agence d'architecture</span>
                                 </div>
                             </div>
                             <div class="w-[90%] lg:w-[50%] flex flex-col justify-end gap-8 lg:gap-0">
@@ -49,7 +48,6 @@
                                 <span class="self-center lg:self-start text-3xl lg:text-[5rem] font-bold">SHAPE YOUR SPACES</span>
                                 <div class="flex flex-col text-md lg:text-xl font-semibold">
                                     <span>Nous façonnons des espaces qui inspirent.</span>
-                                    <h1 class="text-md lg:text-xl font-semibold">Agence d'architecture</h1>
                                 </div>
                             </div>
                             <div class="w-[90%] lg:w-[50%] flex flex-col justify-end gap-8 lg:gap-0">

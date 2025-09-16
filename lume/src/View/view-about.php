@@ -1,8 +1,6 @@
 <?php
 include_once __DIR__ . '/../../templates/head.php';
-include_once __DIR__ . '/../../templates/chatbot.php';
 include_once __DIR__ . '/../../templates/menu.php';
-include_once __DIR__ . '/../../templates/loader.php';
 ?>
 
 <section class="min-h-screen w-full flex flex-col justify-end items-center gap-8 lg:gap-8 relative overflow-hidden" id="hero">

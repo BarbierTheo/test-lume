@@ -1,8 +1,6 @@
 <?php
 include_once __DIR__ . '/../../templates/head.php';
-include_once __DIR__ . '/../../templates/chatbot.php';
 include_once __DIR__ . '/../../templates/menu.php';
-include_once __DIR__ . '/../../templates/loader.php';
 ?>
 
 <!-- IMG principale -->
@@ -38,12 +36,12 @@ include_once __DIR__ . '/../../templates/loader.php';
 
         <div class="flex justify-between w-full">
             <div class="flex flex-col start">
-                <span class="uppercase font-semibold"><?= $project['project_name'] ?></span>
+                <span class="uppercase font-semibold"><?= html_entity_decode($project['project_name']) ?></span>
                 <span class="opacity-80 text-light"><?= $project['project_date'] ?></span>
             </div>
             <div class="flex flex-col items-end">
-                <span class="opacity-80 text-light"><?= !empty($project['project_area']) ? $project['project_area'] . " m²" : "" ; ?></span>
-                <span class="uppercase font-semibold"><?= $project['project_place'] ?></span>
+                <span class="opacity-80 text-light"><?= !empty($project['project_area']) ? html_entity_decode($project['project_area']) . " m²" : "" ; ?></span>
+                <span class="uppercase font-semibold"><?= html_entity_decode($project['project_place']) ?></span>
             </div>
         </div>
 

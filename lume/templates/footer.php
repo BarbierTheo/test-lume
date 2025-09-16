@@ -6,7 +6,7 @@
     </div>
 
     <div class="flex flex-col gap-2 my-2">
-        <a href="/index.php">Accueil</a>
+        <a href="/">Accueil</a>
         <a href="/services">Services</a>
         <a href="/portfolio">Portfolio</a>
         <a href="/about">A propos</a>

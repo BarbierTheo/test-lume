@@ -17,7 +17,7 @@ if (!isset($_GET['projet']) || empty($_GET['projet']) || !is_numeric($_GET['proj
 } else {
     $actualProject = Portfolio::getOneProject($_GET['projet']);
     $images = Portfolio::getImgFromProject($_GET['projet']);
-    // $nbImages = count($images);
+    $nbImages = count($images);
     $imgInProject =  Portfolio::countAllImagesByProject($_GET['projet']);
 }
 

@@ -25,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty(Safe::input($_POST['tagline']))) {
         $errors['tagline'] = "Veuillez ajouter une tagline au projet";
     } else if (strlen(Safe::input($_POST['tagline'])) > 150) {
-        $errors['title'] = "Tagline trop longue, 200 caractères maximum";
+        $errors['tagline'] = "Tagline trop longue, 200 caractères maximum";
     } else if (strlen(Safe::input($_POST['tagline'])) < 8) {
-        $errors['title'] = "Targline trop courte, 8 caractères minimum";
+        $errors['tagline'] = "Tagline trop courte, 8 caractères minimum";
     }
 
     if (empty(Safe::input($_POST['description']))) {
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (empty($errors)) {
 
-        // $i = 0;
+        $i = 0;
 
         $safePost = [
             'title' => Safe::input($_POST['title']),
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $images = [];
 
         $project_directory = ROOT . "/img/projects/$LastIdProject/";
-        mkdir($project_directory, 0700);
+        mkdir($project_directory, 0755);
 
 
         foreach ($_FILES as $value) {
