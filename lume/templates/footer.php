@@ -2,7 +2,7 @@
 
     <div class="flex flex-col gap-2">
         <a href="/home" class="text-3xl font-bold">LUME</a>
-        <span>Chez nous, vos idées prennent forme.</span>
+        <span>De vos rêves à la réalité</span>
     </div>
 
     <div class="flex flex-col gap-2 my-2">

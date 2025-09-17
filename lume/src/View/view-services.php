@@ -31,19 +31,42 @@ include_once __DIR__ . '/../../templates/menu.php';
 
     <section class="min-h-[80vh] flex flex-col justify-center items-center gap-4">
         <div class="flex flex-col gap-8">
-            <h2 class="title1">Architecture</h2>
+            <h2 class="title1">Architecture et conception</h2>
             <div class="flex flex-col lg:flex-row w-full gap-4 lg:gap-8 justify-center items-center">
                 <img src="../../img/services/services2.1.avif" alt="" class="lg:w-[50%] max-h-[40rem] w-full object-cover object-center">
                 <div class="flex flex-col leading-6 justify-between gap-8 lg:w-[50%] lg:min-h-[40rem]">
                     <div class="flex flex-col gap-4">
                         <img src="../../img/services/services2.2.avif" alt="" class="hidden lg:flex">
-                        <span>Nous concevons des espaces uniques, harmonieux et fonctionnels, en accord avec vos besoins et votre environnement. Qu’il s’agisse d’une rénovation, d’un aménagement intérieur ou d’un projet architectural complet, notre équipe vous accompagne avec créativité et rigueur. Chaque projet est pensé sur-mesure pour refléter votre identité et sublimer le lieu.</span>
+                        <span>Nous vous accompagnons dans la conception et l’optimisation de vos espaces, en tenant compte
+                            des contraintes techniques, esthétiques et réglementaires. Chaque projet est pensé pour allier
+                            harmonie et fonctionnalité, en intégrant les matériaux les plus adaptés et en respectant les normes
+                            en vigueur.
+                            Que vous envisagiez une rénovation, un réaménagement intérieur ou un projet de construction, nous
+                            mettons notre expertise au service de votre vision pour transformer vos idées en espaces cohérents,
+                            équilibrés et pérennes.</span>
+                        <span>
+
+                        </span>
                     </div>
                     <a href="/about" class="btn-secondaire">Découvrez nous</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <span>
+        Conception et optimisation des espaces
+        ✔ Agencement intérieur et circulation – Réorganisation des volumes pour plus de fluidité et de
+        fonctionnalité.
+        ✔ Éclairage naturel et ambiance – Étude de la lumière pour un confort optimal.
+        ✔ Choix des matériaux et finitions – Conseils personnalisés sur les textures, couleurs et matières.
+        Études et plans techniques
+        ✔ Plans d’aménagement et d’exécution – Documents détaillés pour artisans et entreprises.
+        ✔ Études de faisabilité – Analyse technique et spatiale pour garantir la viabilité du projet.
+        Design sur-mesure et mobilier intégré
+        ✔ Conception de mobilier sur-mesure – Solutions optimisées et adaptées à chaque espace.
+        ✔ Aménagement personnalisé – Création de solutions sur-mesure selon vos besoins et votre style.
+    </span>
 
     <section class="min-h-[80vh] flex flex-col justify-center items-center gap-4">
         <div class="flex flex-col gap-8">
@@ -52,7 +75,10 @@ include_once __DIR__ . '/../../templates/menu.php';
                 <div class="flex flex-col leading-6 justify-between gap-8 lg:w-[50%] lg:min-h-[40rem]">
                     <div class="flex flex-col gap-4">
                         <img src="../../img/services/services1_2.avif" alt="" class="hidden lg:flex">
-                        <span>De la première idée jusqu’à la concrétisation de votre projet, nous sommes à vos côtés pour vous guider. Études de faisabilité, choix des matériaux, démarches administratives : nous vous aidons à prendre les bonnes décisions à chaque étape. Notre mission : vous apporter une expertise fiable et rassurante, pour une expérience fluide et sereine.</span>
+                        <span>Vous avez une idée précise, mais vous ne savez pas comment la concrétiser ? Nous vous guidons à
+                            chaque étape, du concept à la réalisation, pour vous aider à faire les bons choix et éviter les erreurs.
+                            Grâce à une approche sur-mesure, nous vous apportons des solutions adaptées à vos envies,
+                            contraintes techniques et budget.</span>
                     </div>
                     <a href="/contact" class="btn-secondaire self-end">Travaillons ensemble</a>
                 </div>
@@ -67,7 +93,10 @@ include_once __DIR__ . '/../../templates/menu.php';
             <div class="flex flex-col lg:flex-row w-full gap-4 lg:gap-8 justify-center items-center">
                 <img src="../../img/services/kitchen3.avif" alt="" class="lg:w-[50%] max-h-[40rem] w-full object-cover object-center">
                 <div class="flex flex-col leading-6 justify-between gap-8 lg:w-[50%] lg:min-h-[40rem]">
-                    <span>Nous donnons vie à vos projets avant même leur réalisation grâce à des visuels 3D immersifs et détaillés. Ces rendus permettent de mieux se projeter, de visualiser les volumes, les ambiances et les matériaux, et de valider les choix esthétiques. Une véritable valeur ajoutée pour imaginer et affiner chaque détail en toute confiance.</span>
+                    <span>Un visuel d’exception ne se limite pas à une simple image : il raconte une histoire, évoque une
+                        émotion et projette une vision. Grâce à une maîtrise pointue des logiciels de modélisation et des
+                        techniques avancées de rendu, nous insufflons vie à vos projets à travers des perspectives
+                        saisissantes, des animations immersives et une mise en scène raffinée.</span>
                     <div class="flex flex-col gap-4">
                         <a href="/portfolio" class="btn-secondaire">Découvrez la galerie</a>
                         <img src="../../img/services/kitchen1.avif" alt="" class="hidden lg:flex">

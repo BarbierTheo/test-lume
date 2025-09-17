@@ -17,8 +17,12 @@ include_once __DIR__ . '/../../templates/carousel.php'; ?>
             <img src="../../img/index/terrasse.avif" alt="terrasse avec hamac" class="lg:w-[50%] max-h-[40rem] object-cover">
             <div class="flex flex-col lg:w-[50%] justify-between">
                 <div class="flex flex-col gap-2">
-                    <span>Fondée en 2024 à Rouen, notre agence d'architecture conçoit des espaces durables, élégants et fonctionnels. Nous accompagnons particuliers et professionnels dans la réalisation de projets uniques, pensés pour s’intégrer harmonieusement à leur environnement.</span>
-                    <span>Entre créativité et rigueur, notre équipe pluridisciplinaire mêle expertise technique et sensibilité artistique pour imaginer les lieux de demain.</span>
+                    <span><b>Lume</b> est un atelier indépendant fondé par un architecte diplômé d’État.
+                        Nous sommes spécialisés dans la conception architecturale et la visualisation immersive.
+                        Nous intervenons aussi bien en architecture traditionnelle (construction, rénovation, permis de construire, aménagement intérieur)
+                        qu’en représentation 3D avancée (rendus photoréalistes, modélisations, visites virtuelles avec casques de réalité augmentée).</span>
+                       <span>Qu’il s’agisse d’un permis de construire, d’un projet à valoriser ou d’un aménagement intérieur, nous sommes à vos côtés.</span>
+                    <span>Un concept né d'une rencontre entre l’architecture et l'innovation visuelle.</span>
                 </div>
                 <a href="/about" class="btn-secondaire self-center lg:self-start mt-4 lg:mt-0">En savoir plus</a>
             </div>
@@ -28,7 +32,7 @@ include_once __DIR__ . '/../../templates/carousel.php'; ?>
 
     <!-- NOS PROJETS -->
     <section class="flex flex-col justify-center gap-4 py-16 text-white">
-        <span class="title1">Portfolio</span>
+        <span class="title1">Nos projets</span>
 
         <!-- <div class="flex gap-4 flex-wrap">
                 <button class="py-2 px-3 font-semibold !bg-zinc-100 rounded-full text-black !text-sm !uppercase cursor-pointer">Tous</button>
@@ -100,7 +104,8 @@ include_once __DIR__ . '/../../templates/carousel.php'; ?>
                         <label for="faq-<?= $i ?>" class="sr-only">Ouvrir la question : <?= $faq[$i]["faq_title"] ?></label>
                         <div class="collapse-title font-semibold"><?= $faq[$i]["faq_title"] ?></div>
                         <div class="collapse-content text-sm flex flex-col font-light gap-2">
-                            <?= $faq[$i]["faq_article"] ?>
+                            <?= html_entity_decode($faq[$i]["faq_article"])
+                             ?>
                         </div>
                     </div>
 
@@ -126,7 +131,7 @@ include_once __DIR__ . '/../../templates/carousel.php'; ?>
 
                 <div class="flex flex-col gap-1">
                     <span class="font-bold">Téléphone :</span>
-                    <a href="tel:+bipboubap">02.35.72.43.13</a>
+                    <a href="tel:+33651526027">+33 6 51 52 60 27</a>
                 </div>
 
                 <div class="flex flex-col gap-1">
